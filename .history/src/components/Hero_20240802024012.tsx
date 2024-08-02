@@ -8,7 +8,6 @@ export default function Hero() {
         src="/assets/logo.jpg"
         width={256}
         height={256}
-        style={{ boxShadow: "2px 2px 5px #000000" }}
         alt=""
         className="relative z-10"
       />
