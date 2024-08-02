@@ -23,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${cardo.variable}`}>{children}</body>
+      <body className={`${inter.className}  ${cardo.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

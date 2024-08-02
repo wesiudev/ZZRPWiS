@@ -8,11 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        cardo: ["var(--font-cardo)"],
-      },
       backgroundImage: {
-        heroBG: "url('/assets/heroBG.jpg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

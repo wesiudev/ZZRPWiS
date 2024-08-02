@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="bg-white text-zinc-800">siema</div>
+      <div className="bg-white">siema</div>
     </>
   );
 }
