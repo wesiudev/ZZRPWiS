@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   themeColor: "red",
   publisher: "wesiu.dev",
   manifest: "/manifest.json",
+
   verification: {
     google: "google85185d3abec28326.html",
   },
@@ -44,13 +45,13 @@ export const metadata: Metadata = {
   // ],
   title: "Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
   description:
-    "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",
+    "1001 Pomysłów na biznes. Skorzystaj z pomocy naszych asystentów i stwórz projekt, który będzie udaną inwestycją. Discord, Poradniki, Społeczność Biznesu.",
   openGraph: {
     type: "website",
-    url: "https://ZZRPWiS.pl",
-    title: "Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
+    url: "https://quixy.pl",
+    title: "Quixy.pl - Generator pomysłów | Twój nowy pomysł na biznes",
     description:
-      "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",
-    siteName: "ZZRPWiS",
+      "1001 Pomysłów na biznes. Skorzystaj z pomocy naszych asystentów i stwórz projekt, który będzie udaną inwestycją. Discord, Poradniki, Społeczność Biznesu.",
+    siteName: "Quixy",
   },
 };
