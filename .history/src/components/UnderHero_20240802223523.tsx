@@ -6,7 +6,6 @@ import {
   motion as motionDiv,
 } from "framer-motion";
 import Preambule from "./Preambule";
-import Image from "next/image";
 
 export default function UnderHero({
   engagementLevel,
@@ -63,14 +62,6 @@ export default function UnderHero({
           sektorze rolnictwa, handlu, produkcji, doradców, KGW, naukowców… w
           ilości Siła. - Nic bez nas o Nas{" "}
         </p>
-        <Image
-          src="/assets/logo.jpg"
-          width={224}
-          height={224}
-          alt=""
-          style={{ boxShadow: "2px 2px 5px #000000" }}
-          className="mt-24 mx-auto"
-        />
         <Preambule />
       </div>
     </motionDiv.div>

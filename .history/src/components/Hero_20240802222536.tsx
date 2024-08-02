@@ -68,6 +68,7 @@ export default function Hero() {
         translateY={underHeroTranslateY}
         scale={underHeroScale}
       />
+      <Preambule />
     </>
   );
 }

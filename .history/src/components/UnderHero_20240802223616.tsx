@@ -68,8 +68,7 @@ export default function UnderHero({
           width={224}
           height={224}
           alt=""
-          style={{ boxShadow: "2px 2px 5px #000000" }}
-          className="mt-24 mx-auto"
+          className="mt-24"
         />
         <Preambule />
       </div>

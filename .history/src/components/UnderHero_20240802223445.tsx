@@ -6,7 +6,6 @@ import {
   motion as motionDiv,
 } from "framer-motion";
 import Preambule from "./Preambule";
-import Image from "next/image";
 
 export default function UnderHero({
   engagementLevel,
@@ -24,7 +23,7 @@ export default function UnderHero({
         translateY: translateY,
         boxShadow: "2px 2px 5px #000000",
       }}
-      className={` bg-white select-none`}
+      className={`h-[300vh] bg-white select-none`}
     >
       <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
         <h2 className="text-2xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
@@ -63,14 +62,6 @@ export default function UnderHero({
           sektorze rolnictwa, handlu, produkcji, doradców, KGW, naukowców… w
           ilości Siła. - Nic bez nas o Nas{" "}
         </p>
-        <Image
-          src="/assets/logo.jpg"
-          width={224}
-          height={224}
-          alt=""
-          style={{ boxShadow: "2px 2px 5px #000000" }}
-          className="mt-24 mx-auto"
-        />
         <Preambule />
       </div>
     </motionDiv.div>
