@@ -26,7 +26,7 @@ export default function Hero() {
   const underHeroScale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [0, 0.5, 0.95]
+    [0, 0.5, 0.9]
   );
   const underHeroOpacity = useTransform(
     scrollYProgress,

@@ -24,7 +24,7 @@ export default function UnderHero({
       }}
       className={`h-[300vh] bg-white select-none`}
     >
-      <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
+      <div className="p-3 md:p-6 lg:p-12 xl:p-16 2xl:p-24">
         <h2 className="text-3xl 2xl:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
           Zostań członkiem Związku!!!!
         </h2>
