@@ -7,7 +7,6 @@ import {
 } from "framer-motion";
 import Preambule from "./Preambule";
 import Image from "next/image";
-import { FaMessage, FaUsers } from "react-icons/fa6";
 
 export default function UnderHero({
   engagementLevel,
@@ -28,25 +27,15 @@ export default function UnderHero({
       className={` bg-white select-none`}
     >
       <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
-        <div className="flex flex-col items-center mt-12">
-          <div className="mb-12 p-6 rounded-full border-[3px] bg-blue-500 border-blue-700 aspect-square w-32 h-32 flex items-center justify-center">
-            <FaUsers className="text-white text-5xl" />
-          </div>
-          <p className="mx-auto text-center max-w-[50rem] font-cardo mb-12 text-zinc-800 drop-shadow-xl shadow-black font-bold text-4xl">
-            Zaangażujmy się wspólnie w prace Związku. Razem jesteśmy w stanie
-            wiele zdziałać.
-          </p>
-        </div>
-        <div className="flex flex-col items-center mt-12">
-          <div className="mb-12 p-6 rounded-full border-[3px] bg-blue-500 border-blue-700 aspect-square w-32 h-32 flex items-center justify-center">
-            <FaMessage className="text-white text-5xl" />
-          </div>
-          <p className="mx-auto text-center max-w-[50rem] font-cardo text-zinc-800 drop-shadow-xl shadow-black font-bold text-4xl">
-            Zabieraj głos w sprawach ważnych dla Ciebie i Twojego
-            przedsiębiorstwa.
-          </p>
-        </div>
-        <h2 className="text-2xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold mt-24">
+        <p className="mx-auto text-center max-w-[40rem] font-cardo mb-12 text-zinc-800 drop-shadow-xl shadow-black font-bold">
+          Zaangażujmy się wspólnie w prace Związku. Razem jesteśmy w stanie
+          wiele zdziałać.
+        </p>
+        <p className="mx-auto text-center max-w-[40rem] font-cardo text-zinc-800 drop-shadow-xl shadow-black font-bold">
+          Zabieraj głos w sprawach ważnych dla Ciebie i Twojego
+          przedsiębiorstwa.
+        </p>
+        <h2 className="text-2xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
           Zostań członkiem Związku!!!!
         </h2>
         <p className="text-gray-500 2xl:text-lg text-justify">

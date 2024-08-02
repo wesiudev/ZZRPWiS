@@ -28,7 +28,7 @@ export default function UnderHero({
       className={` bg-white select-none`}
     >
       <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
-        <div className="flex flex-col items-center mt-12">
+        <div className="flex flex-col items-center">
           <div className="mb-12 p-6 rounded-full border-[3px] bg-blue-500 border-blue-700 aspect-square w-32 h-32 flex items-center justify-center">
             <FaUsers className="text-white text-5xl" />
           </div>
@@ -37,8 +37,8 @@ export default function UnderHero({
             wiele zdziałać.
           </p>
         </div>
-        <div className="flex flex-col items-center mt-12">
-          <div className="mb-12 p-6 rounded-full border-[3px] bg-blue-500 border-blue-700 aspect-square w-32 h-32 flex items-center justify-center">
+        <div className="flex flex-col">
+          <div className="p-6 rounded-full border-[3px] bg-blue-500 border-blue-700 aspect-square w-32 h-32 flex items-center justify-center">
             <FaMessage className="text-white text-5xl" />
           </div>
           <p className="mx-auto text-center max-w-[50rem] font-cardo text-zinc-800 drop-shadow-xl shadow-black font-bold text-4xl">
