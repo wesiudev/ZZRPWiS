@@ -21,17 +21,18 @@ export default function Hero() {
   const underHeroTranslateY = useTransform(
     scrollYProgress,
     [30, 5, 1],
-    [0, 0.5, 1]
+    [0, 0.3, 1]
   );
   const underHeroScale = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
-    [0, 0.5, 0.95]
+    [0, 0.7, 1],
+    [0, 0.3, 0.95]
   );
   return (
     <>
       <main className="h-full flex min-h-[50vh] flex-col items-center justify-between p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-24 bg-heroBG bg-center relative">
         <div
+          id="about"
           ref={mainWrapper}
           className="absolute -bottom-[50vh] translate-y-[19.05%] left-0 w-full h-full z-[50]"
         ></div>
