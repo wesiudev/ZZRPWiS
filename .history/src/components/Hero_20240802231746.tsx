@@ -26,7 +26,7 @@ export default function Hero() {
   );
   const underHeroScale = useTransform(
     scrollYProgress,
-    [0, 0.3, 1],
+    [0, 0.35, 1],
     [0, 0.75, 0.95]
   );
   return (

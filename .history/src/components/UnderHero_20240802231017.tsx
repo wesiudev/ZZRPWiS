@@ -28,31 +28,29 @@ export default function UnderHero({
       className={` bg-white select-none`}
     >
       <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
-        <div className="flex flex-col items-center justify-center 2xl:grid 2xl:grid-cols-2 2xl:space-x-12">
-          <div className="flex flex-col items-center justify-start mt-12">
-            <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
-              <FaUsers className="text-white text-5xl" />
-            </div>
-            <p
-              style={{ lineHeight: 1.35, textShadow: "1px 1px 1px green" }}
-              className="mx-auto text-center max-w-[50rem] font-cardo mb-12 text-zinc-800  font-bold text-4xl"
-            >
-              Zaangażujmy się wspólnie w prace Związku. Razem jesteśmy w stanie
-              wiele zdziałać.
-            </p>
+        <div className="flex flex-col items-center mt-12">
+          <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
+            <FaUsers className="text-white text-5xl" />
           </div>
-          <div className="flex flex-col items-center justify-start mt-12 2xl:mt-0">
-            <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
-              <FaMessage className="text-white text-5xl" />
-            </div>
-            <p
-              style={{ lineHeight: 1.35, textShadow: "1px 1px 1px green" }}
-              className="mx-auto text-center max-w-[50rem] font-cardo text-zinc-800 drop-shadow-xl shadow-black font-bold text-4xl"
-            >
-              Zabieraj głos w sprawach ważnych dla Ciebie i Twojego
-              przedsiębiorstwa.
-            </p>
+          <p
+            style={{ lineHeight: 1.35, textShadow: "1px 1px 1px green" }}
+            className="mx-auto text-center max-w-[50rem] font-cardo mb-12 text-zinc-800  font-bold text-4xl"
+          >
+            Zaangażujmy się wspólnie w prace Związku. Razem jesteśmy w stanie
+            wiele zdziałać.
+          </p>
+        </div>
+        <div className="flex flex-col items-center mt-12">
+          <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
+            <FaMessage className="text-white text-5xl" />
           </div>
+          <p
+            style={{ lineHeight: 1.35, textShadow: "1px 1px 1px green" }}
+            className="mx-auto text-center max-w-[50rem] font-cardo text-zinc-800 drop-shadow-xl shadow-black font-bold text-4xl"
+          >
+            Zabieraj głos w sprawach ważnych dla Ciebie i Twojego
+            przedsiębiorstwa.
+          </p>
         </div>
         <h2 className="text-2xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold mt-24">
           Zostań członkiem Związku!!!!

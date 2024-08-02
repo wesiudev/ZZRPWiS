@@ -21,13 +21,13 @@ export default function Hero() {
 
   const underHeroTranslateY = useTransform(
     scrollYProgress,
-    [0, 1, 2],
+    [15, 5, 1],
     [0, 0.5, 1]
   );
   const underHeroScale = useTransform(
     scrollYProgress,
-    [0, 0.3, 1],
-    [0, 0.75, 0.95]
+    [0, 0.5, 1],
+    [0, 0.5, 0.95]
   );
   return (
     <>
