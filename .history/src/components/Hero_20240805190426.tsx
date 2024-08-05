@@ -28,7 +28,7 @@ export default function Hero() {
       <main className="h-full flex min-h-[50vh] flex-col items-center justify-between p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-24 bg-heroBG bg-center bg-no-repeat bg-cover relative">
         <div
           ref={mainWrapper}
-          className="absolute -bottom-[50vh] translate-y-[19.05%] left-0 w-full h-full z-[50]"
+          className="absolute -bottom-[50vh] translate-y-[19.05%] left-0 w-full h-full z-[10]"
         ></div>
         <Image
           src="/assets/logo.jpg"
@@ -36,10 +36,9 @@ export default function Hero() {
           height={256}
           style={{ boxShadow: "2px 2px 5px #000000" }}
           alt=""
-          className="relative z-10 select-none"
+          className="relative z-10"
         />
-        <div className="absolute top-0 left-0 bg-black w-full h-full bg-opacity-40 z-0"></div>
-        <div className="relative z-[9999] flex flex-col select-none">
+        <div className="relative z-10 flex flex-col">
           <p
             style={{ textShadow: "2px 2px 5px #000000" }}
             className="text-xl md:text-4xl text-white font-cardo font-bold mt-12 text-center"

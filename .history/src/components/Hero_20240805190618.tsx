@@ -36,7 +36,7 @@ export default function Hero() {
           height={256}
           style={{ boxShadow: "2px 2px 5px #000000" }}
           alt=""
-          className="relative z-10 select-none"
+          className="relative z-10"
         />
         <div className="absolute top-0 left-0 bg-black w-full h-full bg-opacity-40 z-0"></div>
         <div className="relative z-[9999] flex flex-col select-none">

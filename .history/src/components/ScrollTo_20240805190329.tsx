@@ -21,7 +21,7 @@ export default function ScrollTo({
       spy={true}
       smooth={true}
       offset={0}
-      duration={500}
+      duration={1000}
     >
       {label}
     </ScrollTo>

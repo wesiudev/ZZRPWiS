@@ -25,26 +25,26 @@ export default function UnderHero({
       className={`duration-500 bg-white select-none`}
     >
       <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
-        <div className="flex flex-col items-center justify-center 2xl:flex-row 2xl:space-x-12 mb-12">
-          <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center 2xl:grid 2xl:grid-cols-2 2xl:space-x-12">
+          <div className="flex flex-col items-center justify-start mt-12 bg-blue-500">
             <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
               <FaUsers className="text-white text-5xl" />
             </div>
             <p
               style={{ lineHeight: 1.35, textShadow: "1px 1px 3px gray" }}
-              className="mx-auto text-center font-cardo text-zinc-800 font-bold text-2xl 2xl:text-3xl max-w-[40rem]"
+              className="mx-auto text-center font-cardo mb-12 text-zinc-800 font-bold text-2xl 2xl:text-3xl max-w-[40rem]"
             >
               Zaangażujmy się wspólnie w prace Związku. Razem jesteśmy w stanie
               wiele zdziałać.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-start mt-12 2xl:mt-0">
+          <div className="flex flex-col items-center justify-start mt-12 2xl:mt-0 bg-red-500">
             <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
               <FaMessage className="text-white text-5xl" />
             </div>
             <p
               style={{ lineHeight: 1.35, textShadow: "1px 1px 3px gray" }}
-              className="mx-auto text-center font-cardo text-zinc-800 font-bold text-2xl 2xl:text-3xl max-w-[40rem]"
+              className="mx-auto text-center font-cardo mb-12 text-zinc-800 font-bold text-2xl 2xl:text-3xl max-w-[40rem]"
             >
               Zabieraj głos w sprawach ważnych dla Ciebie i Twojego
               przedsiębiorstwa.
