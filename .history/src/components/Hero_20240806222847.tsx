@@ -58,14 +58,8 @@ export default function Hero() {
       <Pause />
 
       <UnderHero engagementLevel={engagementLevel} scale={underHeroScale} />
-      {/* wojewodztwa jak na hexon */}
-      {/* <div className=""></div> */}
-      <div
-        className="p-12 bg-white m-12"
-        style={{ boxShadow: "2px 2px 5px #000000" }}
-      >
-        <h2 className="text-zinc-800 font-bold text-5xl">Nasze Współprace</h2>
-      </div>
+
+      <div className="p-12 bg-white mt-12">Kontakt</div>
     </>
   );
 }

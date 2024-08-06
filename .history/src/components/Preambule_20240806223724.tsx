@@ -20,7 +20,7 @@ export default function Preambule() {
             POPRZEZ:
           </strong>
         </p>
-        <ul className="list-disc list-inside ml-4 space-y-12">
+        <ul className="list-disc list-inside ml-4">
           <li>
             <strong className="text-4xl">A)</strong> DĄŻENIE DO ZAKAZU WSZELKIEJ
             DYSKRYMINACJI I MOBBINGU W STOSUNKACH PRACY, SPRAWIEDLIWE

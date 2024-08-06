@@ -64,7 +64,7 @@ export default function Hero() {
         className="p-12 bg-white m-12"
         style={{ boxShadow: "2px 2px 5px #000000" }}
       >
-        <h2 className="text-zinc-800 font-bold text-5xl">Nasze Współprace</h2>
+        <h2 className="text-zinc-800">Nasze Współprace</h2>
       </div>
     </>
   );
