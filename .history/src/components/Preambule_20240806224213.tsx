@@ -4,10 +4,10 @@ export default function Preambule() {
   return (
     <div className="mt-24 max-w-[80%] text-gray-500 mx-auto !text-justify">
       <h2
-        className="text-4xl sm:text-7xl font-bold mb-12 text-red-500 drop-shadow-xl shadow-black"
+        className="text-7xl font-bold mb-12 text-zinc-00 drop-shadow-xl shadow-black"
         style={{ textShadow: "2px 2px 5px #000" }}
       >
-        PREAMBUŁA
+        Preambuła
       </h2>
       <div className="space-y-12">
         <p>
