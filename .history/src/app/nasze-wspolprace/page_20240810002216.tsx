@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa6";
 
 export default async function Page() {
   return (

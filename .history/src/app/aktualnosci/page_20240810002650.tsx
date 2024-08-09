@@ -57,7 +57,7 @@ export default async function Page() {
           </div>
         )}
 
-        <div className="p-12 italic text-base text-white-800 drop-shadow-lg shadow-black font-light mt-3">
+        <div className="italic text-base text-white-800 drop-shadow-lg shadow-black font-light mt-3">
           Brak postów
         </div>
       </div>
