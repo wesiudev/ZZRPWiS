@@ -105,8 +105,7 @@ export default function UnderHero({
         />
         <Preambule />
         <div className="text-zinc-800 mt-12">
-          <h2 className="font-bold text-5xl sm:text-6xl">Wesprzyj ZZRPWiS:</h2>{" "}
-          <br />
+          <h2 className="font-bold text-6xl">Wesprzyj ZZRPWiS:</h2> <br />
           <p className="text-gray-500 mt-6 text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-justify">
             Wpłaty mogą być dokonywane wyłącznie przez osoby fizyczne mające
             stałe miejsce zamieszkania w Polsce i posiadające polskie

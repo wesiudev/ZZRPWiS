@@ -54,7 +54,7 @@ export default async function Page() {
             <Link href="/aktualnosci">Aktualności</Link>
             <Link href="/nasze-wspolprace">Nasze współprace</Link>
           </div>
-          <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">
+          <div className="flex items-center w-full justify-center space-x-4 text-zinc-800 py-4">
             <Link href="#">
               <FaTiktok className="w-12 h-12" />
             </Link>
