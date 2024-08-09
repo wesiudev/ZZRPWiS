@@ -3,10 +3,9 @@ import { getBlogPosts } from "@/firebase";
 import moment from "moment";
 import "moment/locale/pl";
 import Image from "next/image";
-import { renderMarkdown } from "@/lib/parseMarkdown";
+import { renderMarkdown } from "../../../../lib/parseMarkdown";
 import ScrollTo from "@/components/ScrollTo";
-import { polishToEnglish } from "@/lib/polishToEnglish";
-import ScrollToBlog from "@/components/ScrollToBlog";
+import { polishToEnglish } from "../../../../lib/polishToEnglish";
 
 async function getPost(url: string, blogType?: string) {
   const res = await fetch(
@@ -88,7 +87,7 @@ export default async function Page({ params }: { params: any }) {
                     {post.sections.length > 0 &&
                       post.sections.map((section: any, idx: number) => (
                         <span key={idx} className="relative h-12">
-                          <ScrollToBlog section={section} />
+                          <ScrollTo section={section} />
                         </span>
                       ))}
                   </div>

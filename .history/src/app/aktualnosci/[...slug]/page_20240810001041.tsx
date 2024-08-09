@@ -6,7 +6,6 @@ import Image from "next/image";
 import { renderMarkdown } from "@/lib/parseMarkdown";
 import ScrollTo from "@/components/ScrollTo";
 import { polishToEnglish } from "@/lib/polishToEnglish";
-import ScrollToBlog from "@/components/ScrollToBlog";
 
 async function getPost(url: string, blogType?: string) {
   const res = await fetch(

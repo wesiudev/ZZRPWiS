@@ -10,7 +10,7 @@ export default function Page() {
           className="bg-white p-6"
           style={{ boxShadow: "2px 2px 5px #000000" }}
         >
-          <div className="flex justify-between space-x-12">
+          <div className="flex justify-between">
             <Link href="/">
               <Image
                 src="/assets/logo.jpg"
@@ -27,19 +27,6 @@ export default function Page() {
               WSPÓŁPRACE
             </div>
           </div>
-          <Link
-            href="https://hexon.work"
-            target="_blank"
-            title="Dofinansowanie na remont domu"
-          >
-            <Image
-              src="/logo-hexon2.png"
-              width={224}
-              height={224}
-              alt=""
-              className="w-1/2 lg:w-auto mb-12"
-            />
-          </Link>
         </div>
       </div>
     </div>

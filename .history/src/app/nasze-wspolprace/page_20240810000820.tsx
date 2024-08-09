@@ -27,17 +27,14 @@ export default function Page() {
               WSPÓŁPRACE
             </div>
           </div>
-          <Link
-            href="https://hexon.work"
-            target="_blank"
-            title="Dofinansowanie na remont domu"
-          >
+          <Link href="/">
             <Image
               src="/logo-hexon2.png"
               width={224}
               height={224}
               alt=""
               className="w-1/2 lg:w-auto mb-12"
+              style={{ boxShadow: "2px 2px 5px #000000" }}
             />
           </Link>
         </div>
