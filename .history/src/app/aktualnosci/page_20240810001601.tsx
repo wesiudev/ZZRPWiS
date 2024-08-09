@@ -3,7 +3,6 @@ import { getBlogPosts } from "@/firebase";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export default async function Page() {
   const posts = await getBlogPosts();
@@ -11,22 +10,20 @@ export default async function Page() {
   return (
     <>
       <div className="sm:mt-[130px] w-full relative p-12">
-        <Link href="/">
-          <Image
-            src="/assets/logo.jpg"
-            width={224}
-            height={224}
-            alt=""
-            className="logo zzrpwis"
-          />
-        </Link>
+        <Image
+          src="/assets/logo.jpg"
+          width={224}
+          height={224}
+          alt=""
+          className="logo zzrpwis"
+        />
         <h1 className="w-full py-12 text-white font-bold text-5xl sm:text-6xl drop-shadow-xl shadow-black">
           Aktualności ZZRPWiS
         </h1>
 
         <Pause />
       </div>
-      <div className="min-h-[20vh]">
+      <div className="">
         {posts?.posts && (
           <div className="text-3xl text-zinc-800 drop-shadow-lg shadow-black font-bold mt-12">
             Najnowsze wpisy
@@ -62,22 +59,6 @@ export default async function Page() {
               Brak aktualności
             </div>
           ))}
-      </div>
-      <div className="flex items-center w-full justify-center space-x-4 text-white py-12">
-        <Link href="#">
-          <FaTiktok className="w-12 h-12" />
-        </Link>
-        <Link href="#">
-          <FaFacebook className="w-12 h-12" />
-        </Link>
-        <Link href="#">
-          <FaYoutube className="w-12 h-12" />
-        </Link>
-      </div>
-      <div className="flex flex-row flex-wrap space-x-3 text-white mt-4 w-full justify-center pb-12">
-        <Link href="/kontakt">Kontakt</Link>
-        <Link href="/aktualnosci">Aktualności</Link>
-        <Link href="/nasze-wspolprace">Nasze współprace</Link>
       </div>
     </>
   );

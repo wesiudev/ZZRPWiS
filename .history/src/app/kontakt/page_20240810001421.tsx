@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa6";
 
 export default async function Page() {
   return (
@@ -53,17 +53,6 @@ export default async function Page() {
             <Link href="/">Home</Link>
             <Link href="/aktualnosci">Aktualności</Link>
             <Link href="/nasze-wspolprace">Nasze współprace</Link>
-          </div>
-          <div className="flex items-center w-full justify-center space-x-4 text-white py-12">
-            <Link href="#">
-              <FaTiktok className="w-12 h-12" />
-            </Link>
-            <Link href="#">
-              <FaFacebook className="w-12 h-12" />
-            </Link>
-            <Link href="#">
-              <FaYoutube className="w-12 h-12" />
-            </Link>
           </div>
         </div>
       </div>

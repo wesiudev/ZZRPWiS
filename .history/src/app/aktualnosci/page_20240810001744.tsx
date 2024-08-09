@@ -26,7 +26,7 @@ export default async function Page() {
 
         <Pause />
       </div>
-      <div className="min-h-[20vh]">
+      <div className="min-h-[50vh]">
         {posts?.posts && (
           <div className="text-3xl text-zinc-800 drop-shadow-lg shadow-black font-bold mt-12">
             Najnowsze wpisy
@@ -74,7 +74,7 @@ export default async function Page() {
           <FaYoutube className="w-12 h-12" />
         </Link>
       </div>
-      <div className="flex flex-row flex-wrap space-x-3 text-white mt-4 w-full justify-center pb-12">
+      <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 w-full justify-center pb-12">
         <Link href="/kontakt">Kontakt</Link>
         <Link href="/aktualnosci">Aktualności</Link>
         <Link href="/nasze-wspolprace">Nasze współprace</Link>

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FaEnvelope, FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
+import { FaEnvelope } from "react-icons/fa6";
 
 export default async function Page() {
   return (
@@ -11,7 +11,7 @@ export default async function Page() {
           className="bg-white p-6"
           style={{ boxShadow: "2px 2px 5px #000000" }}
         >
-          <div className="flex justify-between">
+          <div className="flex justify-between space-x-12">
             <Link href="/">
               <Image
                 src="/assets/logo.jpg"
@@ -23,48 +23,24 @@ export default async function Page() {
               />
             </Link>
             <div className="underline text-lg lg:text-5xl font-bold text-zinc-800 text-right">
-              KONTAKT
+              NASZE
               <br />
-              ZZRPWiS
+              WSPÓŁPRACE
             </div>
           </div>
-          <ul className="text-zinc-800">
-            <li className="text-2xl">
-              <span className="text-5xl font-bold">NIP</span> <br /> 9571158696{" "}
-            </li>
-            <li className="text-2xl">
-              <span className="text-5xl font-bold">REGON</span> <br /> 525407850{" "}
-            </li>
-          </ul>
-          <h2 className="text-3xl font-bold mt-3 text-zinc-800">
-            Władysława Iv 12E / 6, 80-547 Gdańsk, Polska
-          </h2>
-          <div className="flex items-center text-3xl text-zinc-800 mt-6">
-            <FaEnvelope className="mr-2" /> Adres email
-          </div>
           <Link
-            title="Wyślij email"
-            href="mailto:ZZRPWOLNIISOLIDARNI@WP.PL"
-            className="flex items-center text-lg lg:text-3xl mt-3 text-zinc-800 font-bold hover:underline"
+            href="https://hexon.work"
+            target="_blank"
+            title="Dofinansowanie na remont domu"
           >
-            ZZRPWOLNIISOLIDARNI@WP.PL
+            <Image
+              src="/logo-hexon2.png"
+              width={224}
+              height={224}
+              alt=""
+              className="w-1/2 lg:w-auto mb-12"
+            />
           </Link>
-          <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 mx-auto">
-            <Link href="/">Home</Link>
-            <Link href="/aktualnosci">Aktualności</Link>
-            <Link href="/nasze-wspolprace">Nasze współprace</Link>
-          </div>
-          <div className="flex items-center w-full justify-center space-x-4 text-white py-12">
-            <Link href="#">
-              <FaTiktok className="w-12 h-12" />
-            </Link>
-            <Link href="#">
-              <FaFacebook className="w-12 h-12" />
-            </Link>
-            <Link href="#">
-              <FaYoutube className="w-12 h-12" />
-            </Link>
-          </div>
         </div>
       </div>
     </div>
@@ -100,13 +76,14 @@ export const metadata: Metadata = {
       type: "image/png",
     },
   ],
-  title: "KONTAKT - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
+  title: "AKTUALNOŚCI - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
   description:
     "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",
   openGraph: {
     type: "website",
     url: "https://ZZRPWiS.pl",
-    title: "KONTAKT - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
+    title:
+      "AKTUALNOŚCI - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
     description:
       "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",
     siteName: "ZZRPWiS",

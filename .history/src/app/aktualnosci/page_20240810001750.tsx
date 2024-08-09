@@ -26,7 +26,7 @@ export default async function Page() {
 
         <Pause />
       </div>
-      <div className="min-h-[20vh]">
+      <div className="min-h-[50vh]">
         {posts?.posts && (
           <div className="text-3xl text-zinc-800 drop-shadow-lg shadow-black font-bold mt-12">
             Najnowsze wpisy
