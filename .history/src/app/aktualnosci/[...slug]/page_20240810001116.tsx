@@ -4,6 +4,7 @@ import moment from "moment";
 import "moment/locale/pl";
 import Image from "next/image";
 import { renderMarkdown } from "@/lib/parseMarkdown";
+import ScrollTo from "@/components/ScrollTo";
 import { polishToEnglish } from "@/lib/polishToEnglish";
 import ScrollToBlog from "@/components/ScrollToBlog";
 
