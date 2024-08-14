@@ -70,14 +70,7 @@ export default async function Page() {
               </div>
             </Link>
           </div>
-          <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full pb-12">
-            <Link
-              title="przejdź na naszą stronę główną"
-              className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-              href="/"
-            >
-              STRONA GŁÓWNA
-            </Link>
+          <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full justify-center pb-12">
             <Link
               title="skontaktuj się z nami"
               className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
@@ -91,6 +84,13 @@ export default async function Page() {
               href="/aktualnosci"
             >
               AKTUALNOŚCI
+            </Link>
+            <Link
+              title="sprawdź z kim współpracujemy"
+              className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+              href="/nasze-wspolprace"
+            >
+              NASZE WSPÓŁPRACE
             </Link>
           </div>
           <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">

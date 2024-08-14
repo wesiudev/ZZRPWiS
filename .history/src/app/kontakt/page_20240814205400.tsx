@@ -8,26 +8,16 @@ import { FaEnvelope, FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
 export default async function Page() {
   return (
     <>
-      <div className="z-10 relative">
-        <Regions />
-      </div>
-      <div className="relative py-12 bg-heroBG min-h-screen w-full bg-center bg-no-repeat">
-        <div className="absolute top-0 left-0 bg-black w-full h-full bg-opacity-50" />
-
+      <Regions />
+      <div className="my-12 bg-heroBG min-h-screen w-full bg-center bg-no-repeat">
+        <div className="flex items-center justify-center fixed h-screen w-full left-0 top-0 bg-black bg-opacity-70" />
         <div className="relative z-10">
           <div
-            className="bg-white p-6 w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] rounded-xl my-12 relative z-10 mx-auto"
+            className="bg-white p-6"
             style={{ boxShadow: "2px 2px 5px #000000" }}
           >
-            <div className="grid grid-cols-2 w-full">
-              <div className="text-3xl lg:text-5xl font-bold text-zinc-800 text-left">
-                KONTAKT ZZRPWiS
-              </div>
-              <Link
-                href="/"
-                className="flex items-end justify-end"
-                title="przejdź na stronę główną"
-              >
+            <div className="flex justify-between">
+              <Link href="/">
                 <Image
                   src="/assets/logo.jpg"
                   width={224}
@@ -37,15 +27,20 @@ export default async function Page() {
                   style={{ boxShadow: "2px 2px 5px #000000" }}
                 />
               </Link>
+              <div className="underline text-lg lg:text-5xl font-bold text-zinc-800 text-right">
+                KONTAKT
+                <br />
+                ZZRPWiS
+              </div>
             </div>
             <ul className="text-zinc-800">
               <li className="text-2xl">
-                <span className="text-2xl lg:text-5xl font-bold">NIP</span>{" "}
-                <br /> 9571158696{" "}
+                <span className="text-5xl font-bold">NIP</span> <br />{" "}
+                9571158696{" "}
               </li>
               <li className="text-2xl">
-                <span className="text-2xl lg:text-5xl font-bold">REGON</span>{" "}
-                <br /> 525407850{" "}
+                <span className="text-5xl font-bold">REGON</span> <br />{" "}
+                525407850{" "}
               </li>
             </ul>
             <h2 className="text-3xl font-bold mt-3 text-zinc-800">
@@ -61,28 +56,10 @@ export default async function Page() {
             >
               ZZRPWOLNIISOLIDARNI@WP.PL
             </Link>
-            <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full pb-12">
-              <Link
-                title="przejdź na naszą stronę główną"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-                href="/"
-              >
-                STRONA GŁÓWNA
-              </Link>
-              <Link
-                title="przejdź na nasze współprace"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-                href="/nasze-wspolprace"
-              >
-                NASZE WSPÓŁPRACE
-              </Link>
-              <Link
-                title="zobacz nasze aktualności"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-                href="/aktualnosci"
-              >
-                AKTUALNOŚCI
-              </Link>
+            <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 mx-auto">
+              <Link href="/">Home</Link>
+              <Link href="/aktualnosci">Aktualności</Link>
+              <Link href="/nasze-wspolprace">Nasze współprace</Link>
             </div>
             <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">
               {/* <Link href="#">
@@ -98,9 +75,7 @@ export default async function Page() {
           </div>
         </div>
       </div>
-      <div className="z-10 relative">
-        <Pause />
-      </div>
+      <Pause />
     </>
   );
 }

@@ -20,8 +20,10 @@ export default async function Page() {
             style={{ boxShadow: "2px 2px 5px #000000" }}
           >
             <div className="grid grid-cols-2 w-full">
-              <div className="text-3xl lg:text-5xl font-bold text-zinc-800 text-left">
-                KONTAKT ZZRPWiS
+              <div className="text-lg lg:text-5xl font-bold text-zinc-800 text-left">
+                KONTAKT
+                <br />
+                ZZRPWiS
               </div>
               <Link
                 href="/"
@@ -40,12 +42,12 @@ export default async function Page() {
             </div>
             <ul className="text-zinc-800">
               <li className="text-2xl">
-                <span className="text-2xl lg:text-5xl font-bold">NIP</span>{" "}
-                <br /> 9571158696{" "}
+                <span className="text-5xl font-bold">NIP</span> <br />{" "}
+                9571158696{" "}
               </li>
               <li className="text-2xl">
-                <span className="text-2xl lg:text-5xl font-bold">REGON</span>{" "}
-                <br /> 525407850{" "}
+                <span className="text-5xl font-bold">REGON</span> <br />{" "}
+                525407850{" "}
               </li>
             </ul>
             <h2 className="text-3xl font-bold mt-3 text-zinc-800">

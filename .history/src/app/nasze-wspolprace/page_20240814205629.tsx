@@ -70,28 +70,10 @@ export default async function Page() {
               </div>
             </Link>
           </div>
-          <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full pb-12">
-            <Link
-              title="przejdź na naszą stronę główną"
-              className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-              href="/"
-            >
-              STRONA GŁÓWNA
-            </Link>
-            <Link
-              title="skontaktuj się z nami"
-              className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-              href="/kontakt"
-            >
-              KONTAKT
-            </Link>
-            <Link
-              title="zobacz nasze aktualności"
-              className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-              href="/aktualnosci"
-            >
-              AKTUALNOŚCI
-            </Link>
+          <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 mx-auto">
+            <Link href="/">STRONA GŁÓWNA</Link>
+            <Link href="/kontakt">KONTAKT</Link>
+            <Link href="/aktualnosci">AKTUALNOŚCI</Link>
           </div>
           <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">
             {/* <Link href="#">

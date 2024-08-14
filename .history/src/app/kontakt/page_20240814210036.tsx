@@ -40,12 +40,12 @@ export default async function Page() {
             </div>
             <ul className="text-zinc-800">
               <li className="text-2xl">
-                <span className="text-2xl lg:text-5xl font-bold">NIP</span>{" "}
-                <br /> 9571158696{" "}
+                <span className="text-5xl font-bold">NIP</span> <br />{" "}
+                9571158696{" "}
               </li>
               <li className="text-2xl">
-                <span className="text-2xl lg:text-5xl font-bold">REGON</span>{" "}
-                <br /> 525407850{" "}
+                <span className="text-5xl font-bold">REGON</span> <br />{" "}
+                525407850{" "}
               </li>
             </ul>
             <h2 className="text-3xl font-bold mt-3 text-zinc-800">

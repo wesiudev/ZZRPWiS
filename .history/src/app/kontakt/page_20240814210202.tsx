@@ -61,7 +61,7 @@ export default async function Page() {
             >
               ZZRPWOLNIISOLIDARNI@WP.PL
             </Link>
-            <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full pb-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:flex flex-wrap gap-5 md:space-x-5 text-zinc-800 mt-4 w-full pb-12">
               <Link
                 title="przejdź na naszą stronę główną"
                 className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"

@@ -70,7 +70,7 @@ export default async function Page() {
               </div>
             </Link>
           </div>
-          <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full pb-12">
+          <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full justify-center pb-12">
             <Link
               title="przejdź na naszą stronę główną"
               className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"

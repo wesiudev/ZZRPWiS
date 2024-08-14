@@ -61,24 +61,24 @@ export default async function Page() {
             >
               ZZRPWOLNIISOLIDARNI@WP.PL
             </Link>
-            <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full pb-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:flex flex-wrap gap-3 md:space-x-5 text-zinc-800 mt-4 w-full pb-12">
               <Link
                 title="przejdź na naszą stronę główną"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold w-max"
                 href="/"
               >
                 STRONA GŁÓWNA
               </Link>
               <Link
                 title="przejdź na nasze współprace"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold w-max"
                 href="/nasze-wspolprace"
               >
                 NASZE WSPÓŁPRACE
               </Link>
               <Link
                 title="zobacz nasze aktualności"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold w-max"
                 href="/aktualnosci"
               >
                 AKTUALNOŚCI
