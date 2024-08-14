@@ -71,9 +71,10 @@ export default async function Page() {
             </Link>
           </div>
           <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 mx-auto">
-            <Link href="/">Strona główna</Link>
+            <Link href="/">Home</Link>
             <Link href="/kontakt">Kontakt</Link>
             <Link href="/aktualnosci">Aktualności</Link>
+            <Link href="/nasze-wspolprace">Nasze współprace</Link>
           </div>
           <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">
             {/* <Link href="#">

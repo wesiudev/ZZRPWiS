@@ -1,16 +1,14 @@
 import Pause from "@/components/Pause";
-import Regions from "@/components/Regions";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
+import { FaEnvelope, FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export default async function Page() {
   return (
     <>
       <Regions />
       <div className="bg-heroBG min-h-screen w-full bg-center bg-no-repeat flex items-center justify-center relative">
-        <div className="absolute top-0 left-0 bg-black w-full h-full bg-opacity-50"></div>
         <div
           className="bg-white p-6 w-[95%] sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] rounded-xl my-12 relative z-10"
           style={{ boxShadow: "2px 2px 5px #000000" }}
@@ -71,9 +69,9 @@ export default async function Page() {
             </Link>
           </div>
           <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 mx-auto">
-            <Link href="/">Strona główna</Link>
-            <Link href="/kontakt">Kontakt</Link>
+            <Link href="/">Home</Link>
             <Link href="/aktualnosci">Aktualności</Link>
+            <Link href="/nasze-wspolprace">Nasze współprace</Link>
           </div>
           <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">
             {/* <Link href="#">

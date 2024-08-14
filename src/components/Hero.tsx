@@ -48,24 +48,24 @@ export default function Hero() {
             destination={"about"}
             label="Czytaj dalej"
           />
-          <div className="flex flex-row flex-wrap space-x-3 text-white w-full justify-center mt-6">
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 text-white w-full justify-center mt-6">
             <Link
               href="/kontakt"
-              className="text-base sm:text-lg lg:text-xl xl:text-2xl hover:underline"
+              className="text-center bg-red-500 hover:bg-red-400 text-white px-3 sm:px-6 lg:px-10 py-1 rounded-md items-center justify-center flex text-sm sm:text-lg lg:text-xl xl:text-2xl hover:underline"
             >
-              Kontakt
+              KONTAKT
             </Link>
             <Link
               href="/aktualnosci"
-              className="text-base sm:text-lg lg:text-xl xl:text-2xl hover:underline"
+              className="text-center bg-red-500 hover:bg-red-400 text-white px-3 sm:px-6 lg:px-10 py-1 rounded-md items-center justify-center flex text-sm sm:text-lg lg:text-xl xl:text-2xl hover:underline "
             >
-              Aktualności
+              AKTUALNOŚCI
             </Link>
             <Link
               href="/nasze-wspolprace"
-              className="text-base sm:text-lg lg:text-xl xl:text-2xl hover:underline"
+              className="text-center bg-red-500 hover:bg-red-400 text-white px-3 sm:px-6 lg:px-10 py-1 rounded-md items-center justify-center flex text-sm sm:text-lg lg:text-xl xl:text-2xl hover:underline "
             >
-              Nasze współprace
+              NASZE WSPÓŁPRACE
             </Link>
           </div>
         </div>

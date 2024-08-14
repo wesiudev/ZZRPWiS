@@ -108,7 +108,7 @@ export default function UnderHero({
         <Preambule />
         <div className="text-zinc-800 mt-12">
           <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
-            WESPRZYJ ZZRPWiS:
+            Wesprzyj ZZRPWiS:
           </h2>{" "}
           <br />
           <div className="text-gray-500 text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">

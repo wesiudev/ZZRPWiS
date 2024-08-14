@@ -15,7 +15,6 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import { BsMegaphone } from "react-icons/bs";
-import Regions from "./Regions";
 
 export default function UnderHero({
   engagementLevel,
@@ -108,7 +107,7 @@ export default function UnderHero({
         <Preambule />
         <div className="text-zinc-800 mt-12">
           <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
-            WESPRZYJ ZZRPWiS:
+            Wesprzyj ZZRPWiS:
           </h2>{" "}
           <br />
           <div className="text-gray-500 text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
@@ -125,8 +124,8 @@ export default function UnderHero({
           </div>
         </div>
         <div className="w-full p-4 2xl:p-12 bg-gray-200 mt-12">
-          <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold text-center">
-            NASZE WSPÓŁPRACE
+          <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
+            Nasze współprace
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link
@@ -167,7 +166,7 @@ export default function UnderHero({
           </div>
         </div>
       </div>
-      <div className="flex items-center w-full justify-center space-x-4 text-zinc-800 pb-12">
+      <div className="flex items-center w-full justify-center space-x-4 text-zinc-800 py-12">
         {/* <Link href="#">
           <FaTiktok className="w-12 h-12" />
         </Link> */}
@@ -181,27 +180,49 @@ export default function UnderHero({
           <FaYoutube className="w-12 h-12" />
         </Link> */}
       </div>
-      <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full justify-center pb-12">
-        <Link
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-          href="/kontakt"
-        >
-          KONTAKT
-        </Link>
-        <Link
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-          href="/aktualnosci"
-        >
-          AKTUALNOŚCI
-        </Link>
-        <Link
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-          href="/nasze-wspolprace"
-        >
-          NASZE WSPÓŁPRACE
-        </Link>
+      <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 w-full justify-center pb-12">
+        <Link href="/kontakt">Kontakt</Link>
+        <Link href="/aktualnosci">Aktualności</Link>
+        <Link href="/nasze-wspolprace">Nasze współprace</Link>
       </div>
-      <Regions />
+      <div className="w-full flex items-center overflow-hidden">
+        <div className="flex flex-row move-from-right-to-left ml-[100%]">
+          {regions.map((region: any, i: any) => (
+            <div
+              key={i}
+              className={`flex text-zinc-800 w-max items-center px-12 py-3 border-l-2 border-zinc-800 border-t-2 ${
+                i % 2 === 0 ? "bg-green-300" : "bg-green-200"
+              }`}
+            >
+              <Image
+                src={region.image}
+                width={100}
+                height={100}
+                alt=""
+                className="w-[50px] h-auto mr-3"
+              />
+              <h2 className="w-max">{region.name}</h2>
+            </div>
+          ))}
+          {regions.map((region: any, i: any) => (
+            <div
+              key={i}
+              className={`flex text-zinc-800 w-max items-center px-12 py-3 border-l-2 border-zinc-800 border-t-2 ${
+                i % 2 === 0 ? "bg-green-300" : "bg-green-200"
+              }`}
+            >
+              <Image
+                src={region.image}
+                width={100}
+                height={100}
+                alt=""
+                className="w-[50px] h-auto mr-3"
+              />
+              <h2 className="w-max">{region.name}</h2>
+            </div>
+          ))}
+        </div>
+      </div>
     </motionDiv.div>
   );
 }

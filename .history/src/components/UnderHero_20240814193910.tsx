@@ -108,7 +108,7 @@ export default function UnderHero({
         <Preambule />
         <div className="text-zinc-800 mt-12">
           <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
-            WESPRZYJ ZZRPWiS:
+            Wesprzyj ZZRPWiS:
           </h2>{" "}
           <br />
           <div className="text-gray-500 text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
@@ -125,8 +125,8 @@ export default function UnderHero({
           </div>
         </div>
         <div className="w-full p-4 2xl:p-12 bg-gray-200 mt-12">
-          <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold text-center">
-            NASZE WSPÓŁPRACE
+          <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
+            Nasze współprace
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link
@@ -181,7 +181,7 @@ export default function UnderHero({
           <FaYoutube className="w-12 h-12" />
         </Link> */}
       </div>
-      <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full justify-center pb-12">
+      <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 w-full justify-center pb-12">
         <Link
           className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
           href="/kontakt"

@@ -61,7 +61,7 @@ export default function UnderHero({
         </div>
         <div className="p-4 2xl:p-12 bg-gray-200 select-none">
           <h2 className="text-3xl sm:text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
-            Zostań członkiem Związku!!!!
+            Zostań członkiem Związku!
           </h2>
           <p className="text-gray-500 text-lg xl:text-xl 2xl:text-2xl text-justify">
             Celem naszym jest doprowadzenie do normalności w sektorze rolnym,

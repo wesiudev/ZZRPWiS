@@ -1,5 +1,4 @@
 import Pause from "@/components/Pause";
-import Regions from "@/components/Regions";
 import { getBlogPosts } from "@/firebase";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -8,12 +7,10 @@ import { FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export default async function Page() {
   const posts = await getBlogPosts();
-  console.log(posts);
 
   return (
     <>
-      <Regions />
-      <div className="w-full relative p-12">
+      <div className="sm:mt-[130px] w-full relative p-12">
         <Link href="/">
           <Image
             src="/assets/logo.jpg"
@@ -60,11 +57,9 @@ export default async function Page() {
           </div>
         )}
 
-        {(posts?.posts === typeof undefined || !posts?.posts?.length) && (
-          <div className="p-12 italic text-base text-white-800 drop-shadow-lg shadow-black font-light mt-3">
-            Brak postów
-          </div>
-        )}
+        <div className="p-12 italic text-base text-white-800 drop-shadow-lg shadow-black font-light mt-3">
+          Brak postów
+        </div>
       </div>
       <div className="flex items-center w-full justify-center space-x-4 text-white py-12">
         {/* <Link href="#">
