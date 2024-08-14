@@ -14,7 +14,6 @@ import {
   FaUsers,
   FaYoutube,
 } from "react-icons/fa6";
-import { BsMegaphone } from "react-icons/bs";
 
 export default function UnderHero({
   engagementLevel,
@@ -47,7 +46,7 @@ export default function UnderHero({
           </div>
           <div className="flex flex-col items-center justify-start mt-12 2xl:mt-0 select-none">
             <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
-              <BsMegaphone className="text-white text-5xl" />
+              <FaMessage className="text-white text-5xl" />
             </div>
             <p
               style={{ lineHeight: 1.35, textShadow: "1px 1px 3px gray" }}
