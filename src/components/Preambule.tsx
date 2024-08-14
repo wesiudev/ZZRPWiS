@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Preambule() {
   return (
-    <div className="mt-24 max-w-[95%] text-gray-500 mx-auto !text-justify">
+    <div className="mt-24 max-w-[95%] text-gray-500 mx-auto !text-justify select-none">
       <h2
         className="text-4xl sm:text-7xl font-bold mb-12 text-red-500 drop-shadow-xl shadow-black"
         style={{ textShadow: "2px 2px 5px #000" }}

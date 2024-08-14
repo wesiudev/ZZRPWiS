@@ -45,18 +45,3 @@ body {
 .move-from-right-to-left {
   animation: move-from-right-to-left 30s linear infinite;
 }
-.add_content_btn {
-  @apply bg-white text-zinc-800 font-bold py-2 px-4  cursor-pointer border-dashed border-zinc-800 border-2 w-full hover:bg-gray-300 duration-300;
-}
-.add_image_btn {
-  @apply bg-white text-zinc-800 font-bold py-2 px-4  cursor-pointer border-dashed border-zinc-800 border-2 w-full aspect-square hover:bg-gray-300 duration-300;
-}
-.icon-link {
-  @apply flex flex-row items-center;
-}
-.icon {
-  @apply h-4 w-4 mr-3;
-}
-.text-square {
-  @apply text-justify;
-}

@@ -10,15 +10,14 @@ import {
 
 import { useState } from "react";
 import Image from "next/image";
-import { FaList } from "react-icons/fa6";
 export default function Nav() {
   const [expandedItems, setExpandedItems] = useState([]);
 
   const navItems = [
     {
-      expandable: true,
       title: "Aktualnosci",
-      href: `/admin/products`,
+      href: `/admin/products/edit`,
+      expandable: true,
       icon: <FaArtstation />,
       subItems: [
         {
@@ -27,14 +26,9 @@ export default function Nav() {
           icon: <FaUpload />,
         },
         {
-          title: "Kopie robocze",
-          href: `/admin/products/drafts`,
+          title: "Edytuj wpis",
+          href: `/admin/products/edit`,
           icon: <FaEdit />,
-        },
-        {
-          title: "Wszystkie aktualności",
-          href: `/admin/products`,
-          icon: <FaList />,
         },
       ],
     },

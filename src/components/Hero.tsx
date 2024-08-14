@@ -4,13 +4,8 @@ import ScrollTo from "./ScrollTo";
 import { useRef, useState } from "react";
 import UnderHero from "./UnderHero";
 import Pause from "./Pause";
-import {
-  MotionValue,
-  useScroll,
-  useTransform,
-  motion as motionDiv,
-} from "framer-motion";
-import Preambule from "./Preambule";
+import { useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 export default function Hero() {
   const [engagementLevel, setEngagementLevel] = useState(0);
   const mainWrapper = useRef<any>();
@@ -25,7 +20,7 @@ export default function Hero() {
   );
   return (
     <>
-      <main className="h-full flex min-h-[50vh] flex-col items-center justify-between p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-24 bg-heroBG bg-center bg-no-repeat bg-cover relative">
+      <main className="h-full flex min-h-[50vh] flex-col items-center justify-between p-4 md:p-8 lg:p-12 xl:p-16 2xl:p-24 !py-12 bg-heroBG bg-center bg-no-repeat bg-cover relative">
         <div
           ref={mainWrapper}
           className="absolute -bottom-[50vh] translate-y-[19.05%] left-0 w-full h-full z-[50]"
@@ -42,7 +37,7 @@ export default function Hero() {
         <div className="relative z-[9999] flex flex-col select-none">
           <p
             style={{ textShadow: "2px 2px 5px #000000" }}
-            className="text-xl md:text-4xl text-white font-cardo font-bold mt-12 text-center"
+            className="text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-white font-cardo font-bold mt-12 text-center"
           >
             Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o
             ochronę godności, praw i interesów materialnych. Nie pozwólmy na
@@ -53,6 +48,26 @@ export default function Hero() {
             destination={"about"}
             label="Czytaj dalej"
           />
+          <div className="flex flex-row flex-wrap space-x-3 text-white w-full justify-center mt-6">
+            <Link
+              href="/kontakt"
+              className="text-base sm:text-lg lg:text-xl xl:text-2xl hover:underline"
+            >
+              Kontakt
+            </Link>
+            <Link
+              href="/aktualnosci"
+              className="text-base sm:text-lg lg:text-xl xl:text-2xl hover:underline"
+            >
+              Aktualności
+            </Link>
+            <Link
+              href="/nasze-wspolprace"
+              className="text-base sm:text-lg lg:text-xl xl:text-2xl hover:underline"
+            >
+              Nasze współprace
+            </Link>
+          </div>
         </div>
       </main>
       <Pause />

@@ -28,11 +28,11 @@ export default function UnderHero({
         scale: scale,
         boxShadow: "2px 2px 5px #000000",
       }}
-      className={`duration-500 bg-white select-none`}
+      className={`duration-500 bg-white -mt-12`}
     >
       <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
         <div className="flex flex-col items-center justify-center 2xl:flex-row 2xl:space-x-12 mb-12">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center select-none">
             <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
               <FaUsers className="text-white text-5xl" />
             </div>
@@ -44,7 +44,7 @@ export default function UnderHero({
               wiele zdziałać.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-start mt-12 2xl:mt-0">
+          <div className="flex flex-col items-center justify-start mt-12 2xl:mt-0 select-none">
             <div className="mb-12 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 flex items-center justify-center">
               <FaMessage className="text-white text-5xl" />
             </div>
@@ -57,7 +57,7 @@ export default function UnderHero({
             </p>
           </div>
         </div>
-        <div className="p-4 2xl:p-12 bg-gray-200">
+        <div className="p-4 2xl:p-12 bg-gray-200 select-none">
           <h2 className="text-5xl mb-6 text-zinc-800 drop-shadow-xl shadow-black font-bold">
             Zostań członkiem Związku!!!!
           </h2>
@@ -107,7 +107,7 @@ export default function UnderHero({
         <div className="text-zinc-800 mt-12">
           <h2 className="font-bold text-5xl sm:text-6xl">Wesprzyj ZZRPWiS:</h2>{" "}
           <br />
-          <p className="text-gray-500 mt-6 text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-justify">
+          <div className="text-gray-500 mt-6 text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
             Wpłaty mogą być dokonywane wyłącznie przez osoby fizyczne mające
             stałe miejsce zamieszkania w Polsce i posiadające polskie
             obywatelstwo. Można je zrealizować poprzez: a) przelew z konta
@@ -118,25 +118,103 @@ export default function UnderHero({
             Władysława Iv 12E / 6, 80-547 Gdańsk, Polska Tytuł przelewu:
             „Darowizna na ZZRPWiS” Zsumowane wpłaty nie mogą przekroczyć 33 750
             zł na osobę w ciągu roku kalendarzowego.
-          </p>
+          </div>
+        </div>
+        <div className="w-full mt-12">
+          <h2 className="font-bold text-5xl sm:text-6xl text-zinc-800">
+            Nasze współprace
+          </h2>
+          <Link
+            target="_blank"
+            title="Dofinansowanie na remont domu"
+            href="https://hexon.work/"
+            className="flex flex-col mt-6 text-zinc-500 p-4 hover:bg-zinc-300 duration-100 group"
+          >
+            <Image
+              src="/logo-hexon2.png"
+              width={224}
+              height={224}
+              alt="Dofinansowanie na remont domu Hexon"
+              className="w-[200px] sm:w-[250px] lg:w-[300px]"
+            />
+            <div className="text-lg lg:text-xl xl:text-2xl 2xl:text-3xl mt-3 italic">
+              dofinansowanie na remont domu
+            </div>
+          </Link>
         </div>
       </div>
       <div className="flex items-center w-full justify-center space-x-4 text-zinc-800 py-12">
-        <Link href="#">
+        {/* <Link href="#">
           <FaTiktok className="w-12 h-12" />
-        </Link>
-        <Link href="#">
+        </Link> */}
+        <Link
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=61550239301123&paipv=0&eav=AfZer2jHkWSa-HmLrgFsTw3nhcupkP39hRtDJF9mHJ8yHD3mOZiyraXKsKpK0l_MQFQ"
+        >
           <FaFacebook className="w-12 h-12" />
         </Link>
-        <Link href="#">
+        {/* <Link href="#">
           <FaYoutube className="w-12 h-12" />
-        </Link>
+        </Link> */}
       </div>
       <div className="flex flex-row flex-wrap space-x-3 text-zinc-800 mt-4 w-full justify-center pb-12">
         <Link href="/kontakt">Kontakt</Link>
         <Link href="/aktualnosci">Aktualności</Link>
         <Link href="/nasze-wspolprace">Nasze współprace</Link>
       </div>
+      <div className="w-full flex items-center overflow-hidden">
+        <div className="flex flex-row move-from-right-to-left ml-[100%]">
+          {regions.map((region: any, i: any) => (
+            <div
+              key={i}
+              className={`flex text-zinc-800 w-max items-center px-12 py-3 border-l-2 border-zinc-800 border-t-2 ${
+                i % 2 === 0 ? "bg-green-300" : "bg-green-200"
+              }`}
+            >
+              <Image
+                src={region.image}
+                width={100}
+                height={100}
+                alt=""
+                className="w-[50px] h-auto mr-3"
+              />
+              <h2 className="w-max">{region.name}</h2>
+            </div>
+          ))}
+          {regions.map((region: any, i: any) => (
+            <div
+              key={i}
+              className={`flex text-zinc-800 w-max items-center px-12 py-3 border-l-2 border-zinc-800 border-t-2 ${
+                i % 2 === 0 ? "bg-green-300" : "bg-green-200"
+              }`}
+            >
+              <Image
+                src={region.image}
+                width={100}
+                height={100}
+                alt=""
+                className="w-[50px] h-auto mr-3"
+              />
+              <h2 className="w-max">{region.name}</h2>
+            </div>
+          ))}
+        </div>
+      </div>
     </motionDiv.div>
   );
 }
+
+const regions = [
+  { name: "warmińsko-mazurskie", image: "/assets/regions/warm-maz.png" },
+  { name: "pomorskie", image: "/assets/regions/pom.png" },
+  { name: "podlaskie", image: "/assets/regions/podl.png" },
+  { name: "kujawsko-pomorskie", image: "/assets/regions/kuj-pom.png" },
+  { name: "mazowieckie", image: "/assets/regions/maz.png" },
+  { name: "lubelskie", image: "/assets/regions/lubelskie.png" },
+  { name: "małopolskie", image: "/assets/regions/mal.png" },
+  { name: "dolnośląskie", image: "/assets/regions/dolnoslaskie.png" },
+  { name: "wielkopolskie", image: "/assets/regions/wielk.png" },
+  { name: "lodzkie", image: "/assets/regions/lodz.png" },
+  { name: "świętokrzyskie", image: "/assets/regions/swiet.png" },
+  { name: "zachodniopomorskie", image: "/assets/regions/zach.png" },
+];

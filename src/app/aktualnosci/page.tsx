@@ -62,15 +62,18 @@ export default async function Page() {
         </div>
       </div>
       <div className="flex items-center w-full justify-center space-x-4 text-white py-12">
-        <Link href="#">
+        {/* <Link href="#">
           <FaTiktok className="w-12 h-12" />
-        </Link>
-        <Link href="#">
+        </Link> */}
+        <Link
+          target="_blank"
+          href="https://www.facebook.com/profile.php?id=61550239301123&paipv=0&eav=AfZer2jHkWSa-HmLrgFsTw3nhcupkP39hRtDJF9mHJ8yHD3mOZiyraXKsKpK0l_MQFQ"
+        >
           <FaFacebook className="w-12 h-12" />
         </Link>
-        <Link href="#">
+        {/* <Link href="#">
           <FaYoutube className="w-12 h-12" />
-        </Link>
+        </Link> */}
       </div>
       <div className="flex flex-row flex-wrap space-x-3 text-white mt-4 w-full justify-center pb-12">
         <Link href="/kontakt">Kontakt</Link>

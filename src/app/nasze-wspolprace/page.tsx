@@ -47,15 +47,15 @@ export default async function Page() {
             <Link href="/nasze-wspolprace">Nasze współprace</Link>
           </div>
           <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">
-            <Link href="#">
+            {/* <Link href="#">
               <FaTiktok className="w-12 h-12" />
-            </Link>
-            <Link href="#">
+            </Link> */}
+            <Link href="https://www.facebook.com/profile.php?id=61550239301123&paipv=0&eav=AfZer2jHkWSa-HmLrgFsTw3nhcupkP39hRtDJF9mHJ8yHD3mOZiyraXKsKpK0l_MQFQ">
               <FaFacebook className="w-12 h-12" />
             </Link>
-            <Link href="#">
+            {/* <Link href="#">
               <FaYoutube className="w-12 h-12" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

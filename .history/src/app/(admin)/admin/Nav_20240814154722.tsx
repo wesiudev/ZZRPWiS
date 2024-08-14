@@ -10,7 +10,6 @@ import {
 
 import { useState } from "react";
 import Image from "next/image";
-import { FaList } from "react-icons/fa6";
 export default function Nav() {
   const [expandedItems, setExpandedItems] = useState([]);
 
@@ -32,9 +31,9 @@ export default function Nav() {
           icon: <FaEdit />,
         },
         {
-          title: "Wszystkie aktualności",
+          title: "Wszystkie aktualnosci",
           href: `/admin/products`,
-          icon: <FaList />,
+          icon: <FaShoppingCart />,
         },
       ],
     },
