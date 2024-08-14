@@ -1,5 +1,5 @@
 import { getProduct } from "@/firebase";
-import ProductEdit from "@/components/AdminComponents/ProductEdit";
+import ProductEdit from "../../../../../components/AdminComponents/ProductEdit";
 import { redirect } from "next/navigation";
 
 export default async function Page({
