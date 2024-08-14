@@ -1,8 +1,8 @@
 "use client";
 import { auth } from "@/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-import LoginPage from "@/components/LoginPage";
-import Nav from "@/components/Nav";
+import LoginPage from "../../../components/LoginPage";
+import Nav from "../../../components/Nav";
 import Loading from "./loading";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import StoreProvider from "@/redux/Provider";
