@@ -118,7 +118,7 @@ export default function UnderHero({
             osobistego (nie z konta prowadzonej działalności gospodarczej) lub
             b) za pośrednictwem przekazu pocztowego – jedna osoba może wpłacić
             maksymalnie jednorazowo 2250 zł, na rachunek: 11 1111 1111 1111 1111
-            1111 1111 Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni  
+            1111 1111 Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni
             Władysława Iv 12E / 6, 80-547 Gdańsk, Polska Tytuł przelewu:
             „Darowizna na ZZRPWiS” Zsumowane wpłaty nie mogą przekroczyć 33 750
             zł na osobę w ciągu roku kalendarzowego.
@@ -166,7 +166,7 @@ export default function UnderHero({
           </div>
         </div>
       </div>
-      <div className="flex items-center w-full justify-center space-x-4 text-zinc-800 pb-12">
+      <div className="flex items-center w-full justify-center space-x-4 text-zinc-800">
         {/* <Link href="#">
           <FaTiktok className="w-12 h-12" />
         </Link> */}
@@ -180,24 +180,24 @@ export default function UnderHero({
           <FaYoutube className="w-12 h-12" />
         </Link> */}
       </div>
-      <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full justify-center pb-12">
+      <div className="flex flex-row flex-wrap -ml-3 text-zinc-800 mt-4 w-full justify-center pb-12 px-12">
         <Link
           title="skontaktuj się z nami"
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+          className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold ml-3 mt-4"
           href="/kontakt"
         >
           KONTAKT
         </Link>
         <Link
           title="zobacz nasze aktualności"
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+          className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold ml-3 mt-4"
           href="/aktualnosci"
         >
           AKTUALNOŚCI
         </Link>
         <Link
-          title="sprawdź z kim współpracujemy"
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+          title="sprawdź współprace"
+          className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold ml-3 mt-4"
           href="/nasze-wspolprace"
         >
           NASZE WSPÓŁPRACE

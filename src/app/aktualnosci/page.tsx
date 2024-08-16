@@ -1,66 +1,54 @@
 import Pause from "@/components/Pause";
 import Regions from "@/components/Regions";
-import { getBlogPosts } from "@/firebase";
+import { getProducts } from "@/firebase";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaTiktok, FaYoutube } from "react-icons/fa6";
 
 export default async function Page() {
-  const posts = await getBlogPosts();
-  console.log(posts);
-
+  const posts = await getProducts();
   return (
     <>
       <Regions />
       <div className="w-full relative p-12">
-        <Link href="/">
-          <Image
-            src="/assets/logo.jpg"
-            width={224}
-            height={224}
-            alt=""
-            className="logo zzrpwis"
-          />
-        </Link>
-        <h1 className="w-full py-12 text-white font-bold text-5xl sm:text-6xl drop-shadow-xl shadow-black">
+        <h1 className="w-full py-12 text-white font-bold text-3xl 2xl:text-5xl drop-shadow-xl shadow-black">
           Aktualności ZZRPWiS
         </h1>
-
         <Pause />
       </div>
-      <div className="min-h-[20vh]">
-        {posts?.posts && (
-          <div className="text-3xl text-zinc-800 drop-shadow-lg shadow-black font-bold mt-12">
-            Najnowsze wpisy
-          </div>
-        )}
-        {posts?.posts && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-6 my-8">
-            {posts?.posts.map((post: any, i: number) => (
+      <div className="min-h-[20vh] px-12">
+        {posts && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-6">
+            {posts.map((post: any, i: number) => (
               <Link
                 href={`/aktualnosci/${post.url}`}
                 key={i}
-                className="group relative aspect-square h-max flex flex-col hover:bg-[#74B901] hover:bg-opacity-30 hover:p-1 duration-300 ease-in-out rounded-lg shadow-md  shadow-zinc-700"
+                title={`Przejdź do artykułu ${post.title}`}
+                className="group relative aspect-square h-max flex flex-col hover:bg-[#74B901] hover:bg-opacity-30 hover:p-1 duration-300 ease-in-out"
+                style={{ boxShadow: "0px 0px 5px #000000" }}
               >
                 <div className="w-full overflow-hidden flex items-start">
                   <Image
-                    src={post.mainImage}
+                    src={post.primaryImage}
                     width={1024}
                     height={1024}
-                    alt={post.title}
-                    className="w-full object-contain rounded-lg shadow-md shadow-zinc-700"
+                    alt={`Obrazek ${post.title}`}
+                    className="absolute inset-0 object-cover w-full h-full "
                   />
                 </div>
-                <span className="group-hover:bg-gray-200 duration-300 group-hover:p-4 absolute bottom-3 left-3 right-3 text-base lg:text-xl  drop-shadow-xl shadow-black mt-3 bg-white text-zinc-700 font-bold  text-left p-3 rounded-lg">
+                <h2
+                  style={{ boxShadow: "0px 0px 5px #000000" }}
+                  className="group-hover:bg-gray-300 bg-gray-200 duration-300 absolute bottom-3 left-3 right-3 text-base lg:text-xl mt-3 text-black font-light text-left px-3 py-1"
+                >
                   {post.title}
-                </span>
+                </h2>
               </Link>
             ))}
           </div>
         )}
 
-        {(posts?.posts === typeof undefined || !posts?.posts?.length) && (
+        {!posts && (
           <div className="p-12 italic text-base text-white-800 drop-shadow-lg shadow-black font-light mt-3">
             Brak postów
           </div>
@@ -80,21 +68,32 @@ export default async function Page() {
           <FaYoutube className="w-12 h-12" />
         </Link> */}
       </div>
-      <div className="flex flex-row flex-wrap space-x-5 text-white mt-4 w-full justify-center pb-12">
+      <div className="w-full flex justify-center pb-12">
+        <Link href="/" className="w-max mx-auto">
+          <Image
+            src="/assets/logo.jpg"
+            width={224}
+            height={224}
+            alt="logo zzrpwis"
+            className="w-[224px]"
+          />
+        </Link>
+      </div>
+      <div className="flex flex-row flex-wrap -ml-6 text-white w-full justify-center pb-12 px-12">
         <Link
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+          className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold mt-4 ml-6"
           href="/kontakt"
         >
           KONTAKT
         </Link>
         <Link
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
-          href="/aktualnosci"
+          className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold mt-4 ml-6"
+          href="/"
         >
-          AKTUALNOŚCI
+          STRONA GŁÓWNA
         </Link>
         <Link
-          className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+          className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold mt-4 ml-6"
           href="/nasze-wspolprace"
         >
           NASZE WSPÓŁPRACE

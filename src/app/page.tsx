@@ -3,10 +3,10 @@ import Pause from "@/components/Pause";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       <Hero />
       <Pause />
-    </>
+    </div>
   );
 }
 

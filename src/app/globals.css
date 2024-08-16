@@ -41,7 +41,9 @@ body {
     transform: translateX(-50%);
   }
 }
-
+span {
+  background-color: white !important;
+}
 .move-from-right-to-left {
   animation: move-from-right-to-left 30s linear infinite;
 }

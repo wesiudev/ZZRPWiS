@@ -48,7 +48,7 @@ export default async function Page() {
                 <br /> 525407850{" "}
               </li>
             </ul>
-            <h2 className="text-3xl font-bold mt-3 text-zinc-800">
+            <h2 className="text-2xl font-bold mt-3 text-zinc-800">
               Władysława Iv 12E / 6, 80-547 Gdańsk, Polska
             </h2>
             <div className="flex items-center text-3xl text-zinc-800 mt-6">
@@ -61,30 +61,30 @@ export default async function Page() {
             >
               ZZRPWOLNIISOLIDARNI@WP.PL
             </Link>
-            <div className="flex flex-row flex-wrap space-x-5 text-zinc-800 mt-4 w-full pb-12">
+            <div className="flex flex-row flex-wrap justify-center -ml-3 text-zinc-800 w-full px-12">
               <Link
                 title="przejdź na naszą stronę główną"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+                className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold mt-4 ml-3"
                 href="/"
               >
                 STRONA GŁÓWNA
               </Link>
               <Link
                 title="przejdź na nasze współprace"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+                className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold mt-4 ml-3"
                 href="/nasze-wspolprace"
               >
                 NASZE WSPÓŁPRACE
               </Link>
               <Link
                 title="zobacz nasze aktualności"
-                className="text-base sm:text-lg lg:text-2xl 2xl:text-3xl font-bold"
+                className="text-sm sm:text-lg lg:text-2xl 2xl:text-3xl font-bold mt-4 ml-3"
                 href="/aktualnosci"
               >
                 AKTUALNOŚCI
               </Link>
             </div>
-            <div className="flex items-center w-full space-x-4 text-zinc-800 py-4">
+            <div className="flex items-center justify-center w-full space-x-4 text-zinc-800 mt-4">
               {/* <Link href="#">
               <FaTiktok className="w-12 h-12" />
             </Link> */}

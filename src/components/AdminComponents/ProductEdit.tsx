@@ -29,6 +29,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { EditorState } from "draft-js";
 import { useRouter } from "next/navigation";
 import ExtraSettings from "@/components/AdminComponents/ExtraSettings";
+import { polishToEnglish } from "@/lib/polishToEnglish";
 export default function ProductEdit({
   source,
   place,
@@ -88,7 +89,14 @@ export default function ProductEdit({
   ]);
 
   function handleChange(e: any) {
-    setProduct({ ...product, [e.target.name]: e.target.value });
+    if (e.target.name !== "url") {
+      setProduct({ ...product, [e.target.name]: e.target.value });
+    } else if (e.target.name === "url") {
+      setProduct({
+        ...product,
+        [e.target.name]: polishToEnglish(e.target.value),
+      });
+    }
   }
   function closeInput() {
     setCurrentInput(initialInput);

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         cardo: ["var(--font-cardo)"],
+        gotham: ["var(--font-gotham)"],
       },
       backgroundImage: {
         heroBG: "url('/assets/heroBG.jpg')",
