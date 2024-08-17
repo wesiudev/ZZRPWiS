@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 export default async function Admin() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 lg:grid-cols-4">
       <Link
         href="/admin/products/new"
         className="aspect-square flex flex-col items-center justify-center p-24 bg-gray-200 text-zinc-800 font-bold text-4xl"
