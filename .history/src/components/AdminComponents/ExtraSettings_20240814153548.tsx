@@ -7,20 +7,17 @@ import GoogleKeywordsConfig from "./GoogleKeywordsConfig";
 import UrlConfig from "./UrlConfig";
 
 export default function ExtraSettings({
-  setExtraSettingsOpen,
-  extraSettingsOpen,
   product,
   setProduct,
   handleChange,
   dbUpdate,
 }: {
-  setExtraSettingsOpen: Function;
-  extraSettingsOpen: boolean;
   product: any;
   setProduct: Function;
   handleChange: any;
   dbUpdate: Function;
 }) {
+  const [extraSettingsOpen, setExtraSettingsOpen] = useState(false);
   useEffect(() => {
     dbUpdate(product.id, product);
   }, [extraSettingsOpen]);

@@ -223,8 +223,6 @@ export default function ProductEdit({
             )}
           </p>
           <ExtraSettings
-            extraSettingsOpen={extraSettingsOpen}
-            setExtraSettingsOpen={setExtraSettingsOpen}
             handleChange={handleChange}
             setProduct={setProduct}
             product={product}
