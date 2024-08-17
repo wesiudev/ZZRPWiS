@@ -190,7 +190,7 @@ export default async function Page({ params }: { params: any }) {
           product?.text4Title !== "" &&
           product?.text4Desc !== "" && (
             <div className="pt-24 grid grid-cols-1 lg:grid-cols-2 px-4 md:px-8 lg:px-12 xl:px-20 2xl:px-32 gap-12">
-              <div className="relative w-full">
+              <div className="relative overflow-hidden w-full">
                 {!product.secondaryImage && (
                   <div
                     style={{ boxShadow: "0px 0px 5px #000000" }}
@@ -211,7 +211,7 @@ export default async function Page({ params }: { params: any }) {
                 )}
               </div>
               <div className="flex flex-col">
-                <h2 className="text-3xl text-left font-bold  drop-shadow-xl shadow-black text-zinc-800">
+                <h2 className="text-5xl text-left font-bold  drop-shadow-xl shadow-black text-zinc-800">
                   {product?.text4Title}
                 </h2>
                 <div
@@ -322,28 +322,6 @@ export async function generateMetadata({ params }: { params: any }) {
       {
         name: "quixy",
         url: "https://quixy.pl",
-      },
-    ],
-    icons: [
-      {
-        url: "/favicons/favicon-32x32.png",
-        sizes: "32x32",
-        type: "image/png",
-      },
-      {
-        url: "/favicon.ico",
-        sizes: "48x48",
-        type: "image/x-icon",
-      },
-      {
-        url: "/favicons/android-chrome-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/android-chrome-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
       },
     ],
     openGraph: {

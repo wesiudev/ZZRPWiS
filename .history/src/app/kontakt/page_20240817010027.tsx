@@ -106,18 +106,8 @@ export default async function Page() {
 }
 export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#fff",
-  publisher: "wesiudev.com",
-  authors: [
-    {
-      name: "wesiudev",
-      url: "https://wesiudev.com",
-    },
-    {
-      name: "quixy",
-      url: "https://quixy.pl",
-    },
-  ],
+  themeColor: "red",
+  publisher: "wesiu.dev",
   manifest: "/manifest.json",
   verification: {
     google: "google85185d3abec28326.html",
@@ -149,7 +139,7 @@ export const metadata: Metadata = {
     "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",
   openGraph: {
     type: "website",
-    url: "https://ZZRPWiS.pl/kontakt",
+    url: "https://ZZRPWiS.pl",
     title: "KONTAKT - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
     description:
       "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",

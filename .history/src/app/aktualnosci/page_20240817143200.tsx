@@ -18,7 +18,6 @@ export default async function Page() {
         <Pause />
       </div>
       <div className="min-h-[20vh] px-12">
-        <h2 className="text-white text-lg mb-6">Wszystkie wpisy:</h2>
         {posts && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-6">
             {posts.map((post: any, i: number) => (
@@ -105,7 +104,7 @@ export default async function Page() {
 }
 export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#fff",
+  themeColor: "red",
   publisher: "wesiudev.com",
   authors: [
     {

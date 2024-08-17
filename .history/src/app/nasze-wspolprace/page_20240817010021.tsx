@@ -112,17 +112,7 @@ export default async function Page() {
 export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1",
   themeColor: "red",
-  publisher: "wesiudev.com",
-  authors: [
-    {
-      name: "wesiudev",
-      url: "https://wesiudev.com",
-    },
-    {
-      name: "quixy",
-      url: "https://quixy.pl",
-    },
-  ],
+  publisher: "wesiu.dev",
   manifest: "/manifest.json",
   verification: {
     google: "google85185d3abec28326.html",
@@ -155,7 +145,7 @@ export const metadata: Metadata = {
     "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",
   openGraph: {
     type: "website",
-    url: "https://ZZRPWiS.pl/nasze-wspolprace",
+    url: "https://ZZRPWiS.pl",
     title:
       "NASZE WSPÓŁPRACE - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
     description:

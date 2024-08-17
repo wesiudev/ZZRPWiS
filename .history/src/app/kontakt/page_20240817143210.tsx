@@ -106,18 +106,8 @@ export default async function Page() {
 }
 export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#fff",
-  publisher: "wesiudev.com",
-  authors: [
-    {
-      name: "wesiudev",
-      url: "https://wesiudev.com",
-    },
-    {
-      name: "quixy",
-      url: "https://quixy.pl",
-    },
-  ],
+  themeColor: "red",
+  publisher: "wesiu.dev",
   manifest: "/manifest.json",
   verification: {
     google: "google85185d3abec28326.html",

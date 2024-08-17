@@ -18,7 +18,6 @@ export default async function Page() {
         <Pause />
       </div>
       <div className="min-h-[20vh] px-12">
-        <h2 className="text-white text-lg mb-6">Wszystkie wpisy:</h2>
         {posts && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-6">
             {posts.map((post: any, i: number) => (
@@ -73,8 +72,8 @@ export default async function Page() {
         <Link href="/" className="w-max mx-auto">
           <Image
             src="/assets/logo.jpg"
-            width={420}
-            height={420}
+            width={224}
+            height={224}
             alt="logo zzrpwis"
             className="w-[224px]"
           />
@@ -105,19 +104,8 @@ export default async function Page() {
 }
 export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#fff",
-  publisher: "wesiudev.com",
-  authors: [
-    {
-      name: "wesiudev",
-      url: "https://wesiudev.com",
-    },
-    {
-      name: "quixy",
-      url: "https://quixy.pl",
-    },
-  ],
-
+  themeColor: "red",
+  publisher: "wesiu.dev",
   manifest: "/manifest.json",
   verification: {
     google: "google85185d3abec28326.html",
@@ -149,7 +137,7 @@ export const metadata: Metadata = {
     "Wspieramy Rolników i osoby pracujące na rzecz Rolnictwa. Dbamy o ochronę godności, praw i interesów materialnych. Nie pozwólmy o upadek Polskiego sektora rolnictwa.",
   openGraph: {
     type: "website",
-    url: "https://ZZRPWiS.pl/aktualnosci",
+    url: "https://ZZRPWiS.pl",
     title:
       "AKTUALNOŚCI - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
     description:

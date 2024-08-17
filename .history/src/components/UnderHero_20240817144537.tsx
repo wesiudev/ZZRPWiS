@@ -16,7 +16,7 @@ export default function UnderHero({ scale }: { scale: MotionValue<number> }) {
       className={`duration-500 bg-white -mt-12`}
     >
       <div className="p-6 lg:p-12 xl:p-16 2xl:p-24">
-        <div className="flex flex-col 2xl:items-start items-center justify-center 2xl:flex-row 2xl:space-x-12 mb-12">
+        <div className="flex flex-col 2xl:items-start items-center justify-center lg:flex-row 2xl:space-x-12 mb-12">
           <div className="flex flex-col items-center">
             <div className="mb-6 lg:mb-8 2xl:mb-16 p-6 rounded-full border-[3px] bg-green-500 border-green-700 aspect-square w-32 h-32 lg:w-36 lg:h-36 xl:w-40 xl:h-40 2xl:w-52 2xl:h-52 flex items-center justify-center">
               <FaUsers className="text-white text-5xl lg:text-6xl xl:text-7xl" />

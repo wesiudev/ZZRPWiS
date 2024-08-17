@@ -1,10 +1,6 @@
 {
   "name": "Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
   "short_name": "ZZRPWiS",
-  "start_url": "/aktualnosci",
-  "scope": "/",
-  "lang": "pl-PL",
-  "description": "Zostań członkiem naszego związku ZZRPWiS - Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
   "icons": [
     {
       "src": "/favicons/android-chrome-192x192.png",
