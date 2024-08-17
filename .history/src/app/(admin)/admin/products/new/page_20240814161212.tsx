@@ -1,6 +1,6 @@
 import { v4 as uuid } from "uuid";
 import ProductEdit from "@/components/AdminComponents/ProductEdit";
-export default function Page() {
+export default async function Page() {
   const uniqueId = uuid();
 
   const product = {
