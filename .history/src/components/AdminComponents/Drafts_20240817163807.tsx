@@ -25,19 +25,19 @@ export default function Drafts() {
       {" "}
       <h2 className="text-white font-bold text-3xl mb-6">Kopie robocze</h2>
       <p className="text-white font-light text-lg mb-3">
-        Kiedy zaczynasz pracę nad nowym wpisem, wszystkie wprowadzone dane
+        Kiedy zaczynasz pracę nad nowym produktem, wszystkie wprowadzone dane
         automatycznie zapisują się jako <b>kopia robocza</b>. Kopie robocze
         pozwalają Ci na przerwanie pracy w dowolnym momencie i kontynuowanie jej
-        później - bez obawy, że stracisz postępy.
+        później – bez obawy, że stracisz postępy.
       </p>
       <p className="text-white font-light text-lg mb-3">
-        Kopie robocze <b>nie są widoczne na stronie</b> do momentu, kiedy wpis
+        Kopie robocze nie są widoczne na stronie do momentu, kiedy produkt
         zostanie w pełni dodany i opublikowany. Dzięki temu możesz wracać do
-        pracy, dopracować szczegóły i publikować gotowe wpisy wtedy, gdy będą
+        pracy, dopracować szczegóły i publikować gotowe produkty wtedy, gdy będą
         gotowe.
       </p>
       <p className="text-white font-light text-lg mb-6">
-        <b>Bez stresu</b> - Twoje zmiany są zawsze zapisane!
+        Bez stresu – Twoje zmiany są zawsze zapisane!
       </p>
       <Products
         array={drafts}

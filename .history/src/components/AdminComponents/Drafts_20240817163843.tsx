@@ -31,13 +31,12 @@ export default function Drafts() {
         później - bez obawy, że stracisz postępy.
       </p>
       <p className="text-white font-light text-lg mb-3">
-        Kopie robocze <b>nie są widoczne na stronie</b> do momentu, kiedy wpis
-        zostanie w pełni dodany i opublikowany. Dzięki temu możesz wracać do
-        pracy, dopracować szczegóły i publikować gotowe wpisy wtedy, gdy będą
-        gotowe.
+        Kopie robocze nie są widoczne na stronie do momentu, kiedy wpis zostanie
+        w pełni dodany i opublikowany. Dzięki temu możesz wracać do pracy,
+        dopracować szczegóły i publikować gotowe wpisy wtedy, gdy będą gotowe.
       </p>
       <p className="text-white font-light text-lg mb-6">
-        <b>Bez stresu</b> - Twoje zmiany są zawsze zapisane!
+        Bez stresu - Twoje zmiany są zawsze zapisane!
       </p>
       <Products
         array={drafts}

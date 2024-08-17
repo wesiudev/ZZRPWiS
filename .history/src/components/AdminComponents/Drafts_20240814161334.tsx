@@ -23,22 +23,9 @@ export default function Drafts() {
   return (
     <div>
       {" "}
-      <h2 className="text-white font-bold text-3xl mb-6">Kopie robocze</h2>
-      <p className="text-white font-light text-lg mb-3">
-        Kiedy zaczynasz pracę nad nowym wpisem, wszystkie wprowadzone dane
-        automatycznie zapisują się jako <b>kopia robocza</b>. Kopie robocze
-        pozwalają Ci na przerwanie pracy w dowolnym momencie i kontynuowanie jej
-        później - bez obawy, że stracisz postępy.
-      </p>
-      <p className="text-white font-light text-lg mb-3">
-        Kopie robocze <b>nie są widoczne na stronie</b> do momentu, kiedy wpis
-        zostanie w pełni dodany i opublikowany. Dzięki temu możesz wracać do
-        pracy, dopracować szczegóły i publikować gotowe wpisy wtedy, gdy będą
-        gotowe.
-      </p>
-      <p className="text-white font-light text-lg mb-6">
-        <b>Bez stresu</b> - Twoje zmiany są zawsze zapisane!
-      </p>
+      <h2 className="text-white font-bold text-3xl mx-auto w-max">
+        Kopie robocze
+      </h2>
       <Products
         array={drafts}
         deleteRows={deleteMultipleDrafts}
