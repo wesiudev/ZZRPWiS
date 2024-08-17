@@ -304,11 +304,6 @@ export async function generateMetadata({ params }: { params: any }) {
     description: product?.metaDescription,
     publisher: {
       name: "wesiudev",
-      url: "https://wesiudev.com",
-    },
-    author: {
-      name: "wesiudev",
-      url: "https://wesiudev.com",
     },
     openGraph: {
       type: "website",

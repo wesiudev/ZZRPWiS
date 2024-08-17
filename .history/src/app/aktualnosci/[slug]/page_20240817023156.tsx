@@ -308,7 +308,6 @@ export async function generateMetadata({ params }: { params: any }) {
     },
     author: {
       name: "wesiudev",
-      url: "https://wesiudev.com",
     },
     openGraph: {
       type: "website",
