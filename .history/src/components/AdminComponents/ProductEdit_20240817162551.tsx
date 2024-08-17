@@ -52,7 +52,7 @@ export default function ProductEdit({
   const [currentInput, setCurrentInput] = useState(initialInput);
   const [loading, setLoading] = useState(false);
   const [draftCreated, setDraftCreated] = useState(false);
-  const [freshId, setFreshId] = useState("");
+  const [freshId, setFreshId] = useState();
   function closeImagePicker() {
     setImagePickerOpen(false);
     setSourceOfImagePicker("");
@@ -71,14 +71,14 @@ export default function ProductEdit({
     } else if (place === "new") {
       if (draftCreated) {
         setLoading(true);
-        updateDraft(freshId, product).then(() => setLoading(false));
+        updateDraft(product.id, product).then(() => setLoading(false));
       }
     }
   }
   useEffect(() => {
     const id = uuid();
     if (!draftCreated && place === "new")
-      createDraft(product, id).then(() => setFreshId(id));
+      createDraft(product, id).then((res) => console.log(res));
     setDraftCreated(true);
   }, []);
   useEffect(() => {
