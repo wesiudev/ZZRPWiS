@@ -58,26 +58,28 @@ export default function ProductEdit({
   }
   const [savedAutomatically, setSavedAutomatically] = useState(false);
   function updateAutomatically() {
+    const uniqueId = uuid();
     setLoading(true);
     if (place === "products") {
       updateProduct(product.id, product).then(() => {
         setLoading(false), setSavedAutomatically(true);
       });
     } else if (place === "drafts") {
-      updateDraft(product.id, product).then(() => {
+      updateDraft(product.id || uniqueId, product).then(() => {
         setLoading(false), setSavedAutomatically(true);
       });
     } else if (place === "new") {
       if (draftCreated) {
         setLoading(true);
-        updateDraft(product.id, product).then(() => setLoading(false));
+        updateDraft(product.id || uniqueId, product).then(() =>
+          setLoading(false)
+        );
       }
     }
   }
   useEffect(() => {
-    const id = uuid();
     if (!draftCreated && place === "new")
-      createDraft(product, id).then((res) => console.log(res));
+      createDraft(product, product.id).then((res) => console.log(res));
     setDraftCreated(true);
   }, []);
   useEffect(() => {

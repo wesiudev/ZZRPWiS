@@ -37,6 +37,7 @@ export default function ProductEdit({
   source: any;
   place: "products" | "drafts" | "new";
 }) {
+  const uniqueId = uuid();
   const router = useRouter();
   const [htmlContent, setHtmlContent] = useState(() =>
     EditorState.createEmpty()
@@ -75,9 +76,8 @@ export default function ProductEdit({
     }
   }
   useEffect(() => {
-    const id = uuid();
     if (!draftCreated && place === "new")
-      createDraft(product, id).then((res) => console.log(res));
+      createDraft(product, product.id).then((res) => console.log(res));
     setDraftCreated(true);
   }, []);
   useEffect(() => {

@@ -20,6 +20,7 @@ export default function Page() {
     googleTitle: "",
     googleDescription: "",
     googleKeywords: "",
+    id: uniqueId,
     url: "",
     urlLabel: "",
     additionalPage: true,
