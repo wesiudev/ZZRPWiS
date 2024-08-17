@@ -239,7 +239,7 @@ export default async function Page({ params }: { params: any }) {
                     width={1024}
                     height={1024}
                     alt={`Obrazek ${post.title}`}
-                    className="w-full h-auto"
+                    className="absolute inset-0 object-cover w-full h-full "
                   />
                 </div>
                 <h2

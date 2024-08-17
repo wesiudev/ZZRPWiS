@@ -302,17 +302,22 @@ export default function ProductEdit({
           </div>
         </div>
         <div className={`${isFullscreen ? "px-32" : ""} p-12`}>
+          <div
+            className={`mx-auto text-center w-full mt-12 ${
+              product.title && "text-3xl font-bold"
+            }`}
+          >
+            <ContentButton
+              label="Tytuł wpisu"
+              value={product.title}
+              type="text"
+              title="title"
+              setInput={setCurrentInput}
+              optional={false}
+            />
+          </div>
           <div className="grid grid-cols-2 gap-4 mx-auto mt-12">
             <div className="flex flex-col">
-              {" "}
-              <ContentButton
-                label="Tytuł wpisu"
-                value={product.title}
-                type="text"
-                title="title"
-                setInput={setCurrentInput}
-                optional={false}
-              />
               <ContentButton
                 label="Krótki opis"
                 value={product.shortDesc}
@@ -347,6 +352,7 @@ export default function ProductEdit({
                 setInput={setCurrentInput}
                 optional={true}
               />
+
               <ContentButton
                 label="Opis tekstu 2"
                 value={product.text2Desc}
@@ -434,7 +440,7 @@ export default function ProductEdit({
                     width={1024}
                     height={1024}
                     alt=""
-                    className="min-w-full object-cover"
+                    className="min-w-full object-cover rounded-xl"
                   />
                 </div>
               )}
