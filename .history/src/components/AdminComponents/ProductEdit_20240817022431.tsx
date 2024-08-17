@@ -313,7 +313,6 @@ export default function ProductEdit({
                 setInput={setCurrentInput}
                 optional={false}
               />
-              <div className="mt-3"></div>
               <ContentButton
                 label="Krótki opis"
                 value={product.shortDesc}
@@ -359,7 +358,7 @@ export default function ProductEdit({
               />
             </div>
             {/* image input */}
-            <div className="flex flex-col items-center mt-3">
+            <div className="flex flex-col items-center">
               <div className="w-full">
                 <button
                   style={{ boxShadow: "0px 0px 5px #000000" }}

@@ -313,7 +313,6 @@ export default function ProductEdit({
                 setInput={setCurrentInput}
                 optional={false}
               />
-              <div className="mt-3"></div>
               <ContentButton
                 label="Krótki opis"
                 value={product.shortDesc}
