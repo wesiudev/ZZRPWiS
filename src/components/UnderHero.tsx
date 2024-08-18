@@ -119,7 +119,7 @@ export default function UnderHero({ scale }: { scale: MotionValue<number> }) {
               className="flex flex-col mt-6 text-zinc-500 p-4 hover:bg-zinc-300 duration-100 group items-center justify-center border border-gray-400"
             >
               <Image
-                src="/logo-hexon2.png"
+                src="/assets/logo-hexon2.png"
                 width={420}
                 height={420}
                 alt="Dofinansowanie na remont domu Hexon"
@@ -136,7 +136,7 @@ export default function UnderHero({ scale }: { scale: MotionValue<number> }) {
               className="flex flex-col mt-6 text-zinc-500 p-4 hover:bg-zinc-300 duration-100 group items-center justify-center border border-gray-400"
             >
               <Image
-                src="/rre-logo.png"
+                src="/assets/rre-logo.png"
                 width={420}
                 height={420}
                 alt="Optymalizacja kosztów prądu dla firm"

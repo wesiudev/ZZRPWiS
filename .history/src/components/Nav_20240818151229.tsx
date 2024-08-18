@@ -56,7 +56,7 @@ export default function Nav({
         isNavOpen ? "translate-x-[0]" : "-translate-x-[300px]"
       }`}
     >
-      <div className="flex flex-col justify-between h-screen w-[300px] border-r-[1px] border-[#303345] bg-[#222430]">
+      <div className="flex flex-col h-screen w-[300px] border-r-[1px] border-[#303345] bg-[#222430]">
         <div className="flex flex-col">
           <div className="text-white py-4 px-3">
             <h1 className="text-base font-bold  flex flex-row items-center ">
@@ -74,7 +74,7 @@ export default function Nav({
               className="absolute -right-[50px] w-[50px] h-[50px] top-0 !z-[9999999] bg-blue-400 hover:bg-blue-500 duration-200 text-white flex items-center justify-center"
             >
               <FaArrowRight
-                className={`${isNavOpen ? "rotate-180" : "rotate-0"}`}
+                className={`${isNavOpen ? "rotate-0" : "rotate-180"}`}
               />
             </button>
           </div>
@@ -147,7 +147,7 @@ export default function Nav({
 
                   {item.expandable &&
                     expandedItems.includes(index as never) && (
-                      <ul className=" bg-[#222430] py-2 px-4 w-full">
+                      <ul className=" bg-[#222430]  py-2 px-4 w-full">
                         {item.subItems.map((subItem, subIndex) => (
                           <li key={subIndex}>
                             <Link href={subItem.href}>
@@ -165,24 +165,8 @@ export default function Nav({
             </ul>
           </div>
         </div>
-        <div className="w-full flex py-3 flex-col px-4">
-          <h2 className="text-xl mb-3">Pomoc techniczna:</h2>
-          <Link
-            className="w-full hover:bg-opacity-20 bg-white bg-opacity-0 duration-150 border-2 border-transparent hover:border-gray-300 p-3"
-            href="https://www.wesiudev.com/pl"
-            title="Pomoc techniczna"
-            target="_blank"
-          >
-            <Image
-              src="/assets/wesiudev.png"
-              width={420}
-              height={420}
-              alt="Technical support"
-              className="w-[135px] h-auto"
-            />
-          </Link>
-        </div>
       </div>
+      <div className="">wesiudev</div>
     </div>
   );
 }

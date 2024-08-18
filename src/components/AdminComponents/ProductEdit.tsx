@@ -1,17 +1,9 @@
 "use client";
 import Image from "next/image";
 import Input from "@/components/AdminComponents/Input";
-import Link from "next/link";
 import { useEffect, useState } from "react";
-import {
-  FaCheck,
-  FaImage,
-  FaLongArrowAltLeft,
-  FaLongArrowAltRight,
-  FaTh,
-} from "react-icons/fa";
+import { FaCheck, FaImage } from "react-icons/fa";
 import { AiOutlineFullscreen, AiOutlineFullscreenExit } from "react-icons/ai";
-
 import ContentButton from "@/components/AdminComponents/ContentButton";
 import HtmlInput from "@/components/AdminComponents/HtmlInput";
 import { v4 as uuid } from "uuid";
@@ -30,6 +22,7 @@ import { EditorState } from "draft-js";
 import { useRouter } from "next/navigation";
 import ExtraSettings from "@/components/AdminComponents/ExtraSettings";
 import { polishToEnglish } from "@/lib/polishToEnglish";
+import { toast } from "react-toastify";
 export default function ProductEdit({
   source,
   place,
@@ -46,6 +39,10 @@ export default function ProductEdit({
     title: "",
     label: "",
   };
+
+  const [SEOError, setSEOError] = useState(false);
+  const [normalError, setNormalError] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<any>();
   const [extraSettingsOpen, setExtraSettingsOpen] = useState(false);
   const [imagePickerOpen, setImagePickerOpen] = useState(false);
   const [product, setProduct] = useState<any>(source);
@@ -79,7 +76,10 @@ export default function ProductEdit({
   useEffect(() => {
     const id = uuid();
     if (!draftCreated && place === "new")
-      createDraft({ ...product, id: id }, id).then(() => setFreshId(id));
+      createDraft({ ...product, id: id }, id).then(() => {
+        setFreshId(id);
+        setLoading(false);
+      });
     setDraftCreated(true);
   }, []);
   useEffect(() => {
@@ -121,8 +121,8 @@ export default function ProductEdit({
         const data = {
           src: url,
         };
-
         localImagesArray.push(data);
+        setSelectedImage(data.src);
       } catch (error) {
         console.error("Error uploading file:", error);
       }
@@ -173,6 +173,8 @@ export default function ProductEdit({
       )}
       {imagePickerOpen && (
         <ImagePicker
+          setSelectedImage={setSelectedImage}
+          selectedImage={selectedImage}
           handler={upload}
           imagePickerOpen={imagePickerOpen}
           closeImagePicker={closeImagePicker}
@@ -222,13 +224,14 @@ export default function ProductEdit({
               </>
             )}
           </p>
+
           <ExtraSettings
             extraSettingsOpen={extraSettingsOpen}
             setExtraSettingsOpen={setExtraSettingsOpen}
             handleChange={handleChange}
-            setProduct={setProduct}
             product={product}
             dbUpdate={updateProduct}
+            error={SEOError}
           />
           <div>
             <div className="flex flex-row items-center space-x-2">
@@ -291,11 +294,43 @@ export default function ProductEdit({
                   {!loading && (
                     <button
                       onClick={() => {
-                        deleteDraft(product.id).then(() =>
-                          createProduct(product).then(() =>
-                            router.push("/admin/products")
-                          )
-                        );
+                        if (
+                          product.title &&
+                          product.shortDesc &&
+                          product.primaryImage &&
+                          product.googleTitle &&
+                          product.googleDescription &&
+                          product.url
+                        ) {
+                          deleteDraft(product.id).then(() =>
+                            createProduct(product).then(() =>
+                              router.push("/admin/products")
+                            )
+                          );
+                        } else {
+                          toast.error(<span>Uzupełnij dane!</span>, {
+                            position: "top-right",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                          });
+                          if (
+                            !product.title ||
+                            !product.shortDesc ||
+                            !product.primaryImage
+                          ) {
+                            setNormalError(true);
+                          }
+                          if (
+                            !product.googleTitle ||
+                            !product.googleDescription ||
+                            !product.url
+                          ) {
+                            setSEOError(true);
+                          }
+                        }
                       }}
                       className="w-max bg-green-500 hover:bg-green-400 text-white p-3"
                     >
@@ -311,6 +346,11 @@ export default function ProductEdit({
           <div className="grid grid-cols-2 gap-4 mx-auto mt-12">
             <div className="flex flex-col">
               {" "}
+              {normalError && !product.title && (
+                <div className="my-3 text-red-500 font-bold">
+                  Uzupełnij tytuł!
+                </div>
+              )}
               <ContentButton
                 label="Tytuł wpisu"
                 value={product.title}
@@ -320,6 +360,11 @@ export default function ProductEdit({
                 optional={false}
               />
               <div className="mt-3"></div>
+              {normalError && !product.shortDesc && (
+                <div className="my-3 text-red-500 font-bold">
+                  Uzupełnij opis!
+                </div>
+              )}
               <ContentButton
                 label="Krótki opis"
                 value={product.shortDesc}
@@ -365,10 +410,14 @@ export default function ProductEdit({
               />
             </div>
             {/* image input */}
-            <div className="flex flex-col items-center mt-3">
+            <div className="flex flex-col items-center mt-4">
+              {normalError && !product.primaryImage && (
+                <div className="my-3 text-red-500 font-bold">
+                  Dodaj główny obrazek!
+                </div>
+              )}
               <div className="w-full">
                 <button
-                  style={{ boxShadow: "0px 0px 5px #000000" }}
                   className={`${
                     !product.primaryImage &&
                     "add_image_btn flex flex-col items-center justify-center text-zinc-800"
@@ -378,7 +427,11 @@ export default function ProductEdit({
                     setSourceOfImagePicker("primaryImage");
                   }}
                 >
-                  {!product.primaryImage && <FaImage className="text-7xl" />}
+                  {!product.primaryImage && (
+                    <div className="flex items-center justify-center flex-col">
+                      <FaImage className="text-7xl mb-4" /> Dodaj obraz
+                    </div>
+                  )}
                   {product.primaryImage !== "" && (
                     <div className="min-w-full">
                       <Image
@@ -387,6 +440,7 @@ export default function ProductEdit({
                         height={1024}
                         alt=""
                         className="min-w-full object-cover"
+                        style={{ boxShadow: "0px 0px 5px #000000" }}
                       />
                     </div>
                   )}
@@ -429,7 +483,8 @@ export default function ProductEdit({
             >
               {!product.secondaryImage && (
                 <>
-                  <FaImage className="text-7xl" /> <br />{" "}
+                  <FaImage className="text-7xl mb-4" />
+                  Dodaj obraz
                   <span className="text-sm font-normal">(opcjonalnie)</span>
                 </>
               )}

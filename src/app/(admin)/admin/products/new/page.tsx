@@ -1,4 +1,3 @@
-import { v4 as uuid } from "uuid";
 import ProductEdit from "@/components/AdminComponents/ProductEdit";
 export default function Page() {
   const product = {
@@ -21,8 +20,6 @@ export default function Page() {
     googleDescription: "",
     googleKeywords: "",
     url: "",
-    urlLabel: "",
-    additionalPage: true,
   };
 
   return <ProductEdit source={product} place="new" />;

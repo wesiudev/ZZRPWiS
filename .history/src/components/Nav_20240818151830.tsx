@@ -147,7 +147,7 @@ export default function Nav({
 
                   {item.expandable &&
                     expandedItems.includes(index as never) && (
-                      <ul className=" bg-[#222430] py-2 px-4 w-full">
+                      <ul className=" bg-[#222430]  py-2 px-4 w-full">
                         {item.subItems.map((subItem, subIndex) => (
                           <li key={subIndex}>
                             <Link href={subItem.href}>
@@ -165,20 +165,15 @@ export default function Nav({
             </ul>
           </div>
         </div>
-        <div className="w-full flex py-3 flex-col px-4">
-          <h2 className="text-xl mb-3">Pomoc techniczna:</h2>
-          <Link
-            className="w-full hover:bg-opacity-20 bg-white bg-opacity-0 duration-150 border-2 border-transparent hover:border-gray-300 p-3"
-            href="https://www.wesiudev.com/pl"
-            title="Pomoc techniczna"
-            target="_blank"
-          >
+        <div className="w-full flex items-center justify-center py-3 flex-col">
+          <h2 className="text-xl mb-3">Pomoc:</h2>
+          <Link href="https://www.wesiudev.com/pl" title="Technical support">
             <Image
               src="/assets/wesiudev.png"
               width={420}
               height={420}
               alt="Technical support"
-              className="w-[135px] h-auto"
+              className="w-[100px] h-auto"
             />
           </Link>
         </div>

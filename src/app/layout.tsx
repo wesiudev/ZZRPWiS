@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Cardo } from "next/font/google";
 import Author from "@/components/Author";
+import Toast from "@/components/Toast";
 const cardo = Cardo({
   weight: ["400", "700"],
   style: ["normal", "italic"],

@@ -24,7 +24,7 @@ export default function AdminLayout({
         {user ? (
           <>
             <Nav isNavOpen={isNavOpen} setNavOpen={setNavOpen} />
-            <div className="min-w-full min-h-screen bg-[#222430]">
+            <div className="pl-[300px] min-w-full min-h-screen bg-[#222430]">
               <StoreProvider>{children}</StoreProvider>
             </div>
           </>

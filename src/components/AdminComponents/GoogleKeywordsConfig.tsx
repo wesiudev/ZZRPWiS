@@ -12,7 +12,7 @@ export default function GoogleKeywordsConfig({
   return (
     <div className="my-3">
       <h2 className="z-50 relative group flex items-center justify-center text-xl font-bold text-zinc-800 drop-shadow-xl shadow-black w-max">
-        Słowa kluczowe
+        Słowa kluczowe (opcjonalnie)
         <FaInfoCircle className="h-5 w-5 ml-2 text-blue-600" />
         <div>
           <div className=" text-base bg-gray-300 group-hover:block hidden group-hover:opacity-100 duration-300 opacity-0 w-[500px] h-max p-3.5 fixed left-0 top-7 font-normal">

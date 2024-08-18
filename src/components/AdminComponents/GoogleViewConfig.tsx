@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 export default function GoogleViewConfig({
   product,
   handleChange,
+  error,
 }: {
   product: any;
   handleChange: Function;
+  error: boolean;
 }) {
   const [activeProperty, setActiveProperty] = useState("");
   useEffect(() => {
@@ -76,8 +78,15 @@ export default function GoogleViewConfig({
           {/* if there is no content, show placeholder */}
           {product.googleTitle !== undefined &&
             product.googleTitle.trim() === "" &&
-            activeProperty !== "googleTitle" &&
-            "Tytuł wyświetlany w Google (max. 80 znaków)"}
+            activeProperty !== "googleTitle" && (
+              <div
+                className={`${
+                  error ? "text-red-500 border-red-500" : "border-transparent"
+                } p-2 border-2`}
+              >
+                Tytuł wyświetlany w Google (max. 80 znaków)
+              </div>
+            )}
         </button>
 
         <button
@@ -111,8 +120,17 @@ export default function GoogleViewConfig({
           {/* if there is no content, show placeholder */}
           {product.googleDescription !== undefined &&
             product.googleDescription.trim() === "" &&
-            activeProperty !== "googleDescription" &&
-            "Opis wyświetlany w Google (max. 180-230 znaków) (Co znajdziesz na stronie tego wpisu?/Jakia jest tematyka wpisu?/Co najwazniejsze?/Dodatkowe informacje)"}
+            activeProperty !== "googleDescription" && (
+              <div
+                className={`${
+                  error ? "text-red-500 border-red-500" : "border-transparent"
+                } p-2 border-2`}
+              >
+                Opis wyświetlany w Google (max. 180-230 znaków) (Co znajdziesz
+                na stronie tego wpisu?/Jakia jest tematyka wpisu?/Co
+                najwazniejsze?/Dodatkowe informacje)
+              </div>
+            )}
         </button>
       </div>
     </div>

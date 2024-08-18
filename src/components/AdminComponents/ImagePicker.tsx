@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FaPlus, FaSignOutAlt } from "react-icons/fa";
+import { FaUpload } from "react-icons/fa6";
 export default function ImagePicker({
   handler,
   closeImagePicker,
@@ -9,6 +10,8 @@ export default function ImagePicker({
   setProduct,
   product,
   sourceOfImagePicker,
+  selectedImage,
+  setSelectedImage,
 }: {
   handler: any;
   closeImagePicker: Function;
@@ -17,9 +20,9 @@ export default function ImagePicker({
   setProduct: Function;
   product: any;
   sourceOfImagePicker: string;
+  selectedImage: any;
+  setSelectedImage: any;
 }) {
-  const [selectedImage, setSelectedImage] = useState<any>();
-
   return (
     <div className="fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[70vw] max-h-[80vh] bg-white shadow-sm shadow-black z-[251]">
       <div className="p-6 flex items-center justify-between w-full">
@@ -32,10 +35,17 @@ export default function ImagePicker({
           Zamknij
         </button>
       </div>
-      <div className="w-full overflow-y-scroll">
+      <div className="w-full h-[50vh] overflow-y-scroll">
         {images.length === 0 && (
           <div className="w-full min-h-[50vh] flex items-center justify-center text-center flex-col">
             <b>Brak zdjęć dla tego wpisu.</b>
+            <label
+              htmlFor="uploader"
+              className="w-max mt-4 py-3 px-12 text-center justify-center items-center flex font-bold hover:bg-green-400 bg-green-500 duration-300 text-white"
+            >
+              <FaUpload className="mr-2" />
+              Dodaj zdjęcia
+            </label>
           </div>
         )}
         <div className={`${imagePickerOpen && "h-[50vh]"}`}>
@@ -95,7 +105,7 @@ export default function ImagePicker({
                       });
                       closeImagePicker();
                     }}
-                    className="w-max mt-4 py-3 px-12 text-center justify-center items-center flex font-bold hover:bg-blue-400 bg-blue-500 duration-300 text-white"
+                    className="w-max mt-4 py-3 px-12 text-center justify-center items-center flex font-bold hover:bg-blue-400 bg-blue-500 duration-300 text-white animate-pulse"
                   >
                     Zastosuj
                   </button>
@@ -106,7 +116,7 @@ export default function ImagePicker({
               htmlFor="uploader"
               className="w-max mt-4 py-3 px-12 text-center justify-center items-center flex font-bold hover:bg-green-400 bg-green-500 duration-300 text-white"
             >
-              <FaPlus className="mr-2" />
+              <FaUpload className="mr-2" />
               Dodaj zdjęcia
             </label>
           </div>

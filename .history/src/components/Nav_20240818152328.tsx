@@ -168,10 +168,9 @@ export default function Nav({
         <div className="w-full flex py-3 flex-col px-4">
           <h2 className="text-xl mb-3">Pomoc techniczna:</h2>
           <Link
-            className="w-full hover:bg-opacity-20 bg-white bg-opacity-0 duration-150 border-2 border-transparent hover:border-gray-300 p-3"
+            className="w-full hover:bg-opacity-20 bg-opacity-0 duration-150 border-2 border-transparent hover:border-gray-300 p-3"
             href="https://www.wesiudev.com/pl"
-            title="Pomoc techniczna"
-            target="_blank"
+            title="Technical support"
           >
             <Image
               src="/assets/wesiudev.png"

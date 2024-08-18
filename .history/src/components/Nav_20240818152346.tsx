@@ -170,8 +170,7 @@ export default function Nav({
           <Link
             className="w-full hover:bg-opacity-20 bg-white bg-opacity-0 duration-150 border-2 border-transparent hover:border-gray-300 p-3"
             href="https://www.wesiudev.com/pl"
-            title="Pomoc techniczna"
-            target="_blank"
+            title="Technical support"
           >
             <Image
               src="/assets/wesiudev.png"

@@ -2,6 +2,9 @@
 import { auth } from "@/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import { toastUpdate } from "./Toast/Toasts";
+import { errorCatcher } from "@/lib/errorCatcher";
 
 export default function LoginPage() {
   const [email, setEmail] = useState<string>("");
@@ -9,29 +12,21 @@ export default function LoginPage() {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   function emailPasswordLogin() {
-    if (email.includes("@") && email.includes(".")) {
-      signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {})
-        .catch((error) => {
-          if (error.code === "auth/user-not-found") {
-            setEmailError("Niepoprawne dane.");
-            setTimeout(() => {
-              setEmailError("");
-            }, 7500);
+    const id = toast.loading(<span>Loguję...</span>, {
+      position: "top-right",
+    });
+    (async () => {
+      try {
+        await signInWithEmailAndPassword(auth, email, password).then(
+          (userCredential) => {
+            toastUpdate("Sukces!", id, "success");
           }
-        });
-    } else if (!email.includes("@") || !email.includes(".")) {
-      setEmailError("Wpisz poprawny login");
-      setTimeout(() => {
-        setEmailError("");
-      }, 7500);
-    }
-    if (password.length < 6) {
-      setPasswordError("Błędne hasło");
-      setTimeout(() => {
-        setPasswordError("");
-      }, 7500);
-    }
+        );
+      } catch (err: any) {
+        const errorMsg = errorCatcher(err);
+        toastUpdate(errorMsg, id, "error");
+      }
+    })();
   }
   return (
     <div className="relative flex flex-col h-screen justify-center items-center bg-gray-100 overflow-hidden">
@@ -77,8 +72,8 @@ export default function LoginPage() {
           Login
         </button>
       </form>{" "}
-      <h1 className="text-center text-2xl py-12 bg-green-400 text-white px-3 rounded-b-xl relative z-50">
-        Quixy Admin 🔒
+      <h1 className="text-center text-2xl bg-green-400 text-white p-3 rounded-b-xl relative z-50">
+        Administracja 🔒
       </h1>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-400 via-blue-500 to-red-500 opacity-25"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-green-400 via-blue-500 to-red-500 opacity-25"></div>

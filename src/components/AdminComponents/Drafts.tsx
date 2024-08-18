@@ -21,7 +21,7 @@ export default function Drafts() {
     });
   }, []);
   return (
-    <div>
+    <div className="p-12">
       {" "}
       <h2 className="text-white font-bold text-3xl mb-6">Kopie robocze</h2>
       <p className="text-white font-light text-lg mb-3">
