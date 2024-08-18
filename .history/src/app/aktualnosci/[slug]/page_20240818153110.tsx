@@ -348,7 +348,7 @@ export async function generateMetadata({ params }: { params: any }) {
     ],
     openGraph: {
       type: "website",
-      url: `https://ZZRPWiS.pl/aktualnosci/${product.url}`,
+      url: "https://ZZRPWiS.pl",
       title:
         product?.metaTitle ||
         "ZZRPWiS - Związek Zawodowy Rolnictwa Polskiego Wolni i Solidarni",
@@ -358,7 +358,7 @@ export async function generateMetadata({ params }: { params: any }) {
       siteName: "ZZRPWiS",
       images: [
         {
-          url: product.primaryImage,
+          url: "/favicons/android-chrome-192x192.png",
           type: "image/png",
         },
       ],

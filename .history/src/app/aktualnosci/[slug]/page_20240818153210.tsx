@@ -358,7 +358,7 @@ export async function generateMetadata({ params }: { params: any }) {
       siteName: "ZZRPWiS",
       images: [
         {
-          url: product.primaryImage,
+          url: "/favicons/android-chrome-192x192.png",
           type: "image/png",
         },
       ],
